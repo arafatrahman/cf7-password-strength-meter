@@ -1,0 +1,1802 @@
+
+<!DOCTYPE html>
+<html class="wp-toolbar"
+	lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Edit Document &lsaquo; Esignature 6.1.1 &#8212; WordPress</title>
+<script type="text/javascript">
+addLoadEvent = function(func){if(typeof jQuery!=='undefined')jQuery(function(){func();});else if(typeof wpOnload!=='function'){wpOnload=func;}else{var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}};
+var ajaxurl = '/6.1.1/wp-admin/admin-ajax.php',
+	pagenow = 'admin_page_esign-edit-document',
+	typenow = 'esign',
+	adminpage = 'admin_page_esign-edit-document',
+	thousandsSeparator = ',',
+	decimalPoint = '.',
+	isRtl = 0;
+</script>
+<script type="text/javascript" data-cfasync="false">__BOOKINGPRESSIMAGEURL = "http://localhost/6.1.1/wp-content/plugins/bookingpress-appointment-booking/images";</script><script type="text/javascript">if(typeof(esig_sif_quicktag) != 'undefined'){
+ QTags.addButton( 'esig_1', 'Signer Field',esig_sif_quicktag, null, null, 'Add a signer input field', 309 ); 
+}</script><script type='text/javascript'>/* <![CDATA[ */
+				var esign_inputs = {title: "Add a signer input field",
+            type: "menubutton",
+            icon: "icon esig-icon",
+            menu:[{text:"Insert Textbox",value: "textfield",onclick: function () {esig_sif_admin_controls.popupMenuShow(this.value());}},
+             {text:"Insert Paragraph Text",value: "textarea",onclick: function () {esig_sif_admin_controls.popupMenuShow(this.value());}},
+             {text:"Insert Date Calendar",value:"datepicker",onclick: function () {esig_sif_admin_controls.popupMenuShow(this.value());}},
+             {text:"Insert Signed Date",value: "todaydate",onclick: function () { esig_sif_admin_controls.popupMenuShow(this.value());}},
+             {text:"Insert Radio Buttons",value: "radio",onclick: function () {esig_sif_admin_controls.popupMenuShow(this.value());}},
+             {text:"Insert Checkboxes",value: "checkbox",onclick: function () {esig_sif_admin_controls.popupMenuShow(this.value());}},
+             {text:"Insert Dropdown",value: "dropdown",onclick: function () {esig_sif_admin_controls.popupMenuShow(this.value());}},
+             {text:"Insert Upload Form",value: "file",onclick: function () {esig_sif_admin_controls.popupMenuShow(this.value());}},
+             {text:"Insert Page Break",value: "page_break",onclick: function () {esig_sif_admin_controls.popupMenuShow(this.value());}},{text: "Gravity Form Data",value: "gravity",onclick: function () {  tb_show( "+ Gravity form option", "#TB_inline?width=450&height=300&inlineId=esig-gravity-option"); esign.tbSize(450);}},
+             ]};
+			/* ]]> */ </script><script type='text/javascript'>/* <![CDATA[ */
+				var esignTextInputSif = {"textfield":{"label":"Insert Text Box"},"textarea":{"label":"Insert Paragraph Text"},"datepicker":{"label":"Insert Date Calendar"},"todaydate":{"label":"Insert Signed Date"},"radio":{"label":"Insert Radio Buttons"},"checkbox":{"label":"Insert Checkboxes"},"dropdown":{"label":"Insert Dropdown"},"file":{"label":"Insert Upload Form"},"page_break":{"label":"Insert Page Break"},"Gravity":{"label":"Gravity Form Data"}};
+			/* ]]> */ </script><br />
+<b>Warning</b>:  Undefined property: ESIG_PDF_TO_EMAIL_Admin::$plugin_slug in <b>C:\xampp\htdocs\6.1.1\wp-content\plugins\e-signature-business-add-ons\esig-attach-pdf-to-email\includes\esig-pdf-to-email-admin.php</b> on line <b>193</b><br />
+<br />
+<b>Warning</b>:  Undefined property: ESIG_PDF_TO_EMAIL_Admin::$plugin_slug in <b>C:\xampp\htdocs\6.1.1\wp-content\plugins\e-signature-business-add-ons\esig-attach-pdf-to-email\includes\esig-pdf-to-email-admin.php</b> on line <b>197</b><br />
+<style type='text/css'>#toplevel_page_bookingpress .wp-menu-image img, #toplevel_page_bookingpress_wizard .wp-menu-image img, #toplevel_page_bookingpress_lite_wizard .wp-menu-image img{ padding: 0 !important; opacity: 1 !important; }</style><style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' href='http://localhost/6.1.1/wp-admin/load-styles.php?c=1&amp;dir=ltr&amp;load%5Bchunk_0%5D=dashicons,admin-bar,common,forms,admin-menu,dashboard,list-tables,edit,revisions,media,themes,about,nav-menus,wp-pointer,widgets&amp;load%5Bchunk_1%5D=,site-icon,l10n,buttons,wp-auth-check,wp-jquery-ui-dialog,media-views&amp;ver=6.1.1' media='all' />
+<link rel='stylesheet' id='esig-style-fonts-css' href='http://localhost/6.1.1/wp-content/plugins/e-signature/assets/css/esig-fonts.css?ver=1.7.8' media='all' />
+<link rel='stylesheet' id='esig-icon-css-css' href='http://localhost/6.1.1/wp-content/plugins/e-signature/assets/css/esig-icon.css?ver=1.7.8' media='screen' />
+<link rel='stylesheet' id='esig-updater-css-css' href='http://localhost/6.1.1/wp-content/plugins/e-signature/assets/css/esig-updater.css?ver=1.7.8' media='screen' />
+<link rel='stylesheet' id='esig-mail-css-css' href='http://localhost/6.1.1/wp-content/plugins/e-signature/assets/css/esig-mail.css?ver=1.7.8' media='screen' />
+<link rel='stylesheet' id='esig-addons-css-css' href='http://localhost/6.1.1/wp-content/plugins/e-signature/assets/css/esig-addons.css?ver=1.7.8' media='screen' />
+<link rel='stylesheet' id='esig-license-css-css' href='http://localhost/6.1.1/wp-content/plugins/e-signature/assets/css/esig-license.css?ver=1.7.8' media='screen' />
+<link rel='stylesheet' id='esig-notices-css-css' href='http://localhost/6.1.1/wp-content/plugins/e-signature/assets/css/esig-notices.css?ver=1.7.8' media='screen' />
+<link rel='stylesheet' id='esig-access-code-css-css' href='http://localhost/6.1.1/wp-content/plugins/e-signature/assets/css/esig-access-code.css?ver=1.7.8' media='screen' />
+<link rel='stylesheet' id='esig-dialog-css-css' href='http://localhost/6.1.1/wp-content/plugins/e-signature/assets/css/esig-dialog.css?ver=1.7.8' media='screen' />
+<link rel='stylesheet' id='esig-style-css' href='http://localhost/6.1.1/wp-content/plugins/e-signature/assets/css/style.css?ver=6.1.1' media='all' />
+<link rel='stylesheet' id='e-signature-bootstrap-css' href='http://localhost/6.1.1/wp-content/plugins/e-signature/assets/css/bootstrap.min.css?ver=3.4.1' media='' />
+<link rel='stylesheet' id='e-signature-bootstrap-dialog-css' href='http://localhost/6.1.1/wp-content/plugins/e-signature/assets/css/bootstrap/bootstrap-dialog.css?ver=3.3.4' media='' />
+<link rel='stylesheet' id='esig-main-style-css' href='http://localhost/6.1.1/wp-content/plugins/e-signature/assets/css/esig-main.css?ver=6.1.1' media='all' />
+<link rel='stylesheet' id='e-signature-document-styles-css' href='http://localhost/6.1.1/wp-content/plugins/e-signature/assets/css/chosen.min.css' media='' />
+<link rel='stylesheet' id='e-signature-select2-styles-css' href='http://localhost/6.1.1/wp-content/plugins/e-signature/assets/css/select2.min.css' media='' />
+<link rel='stylesheet' id='gform_admin_icons-css' href='http://localhost/6.1.1/wp-content/plugins/gravityforms/assets/css/dist/admin-icons.min.css?ver=2.6.7' media='all' />
+<link rel='stylesheet' id='gform_admin_css_utilities-css' href='http://localhost/6.1.1/wp-content/plugins/gravityforms/assets/css/dist/admin-css-utilities.min.css?ver=2.6.7' media='all' />
+<link rel='stylesheet' id='gform_admin_components-css' href='http://localhost/6.1.1/wp-content/plugins/gravityforms/assets/css/dist/admin-components.min.css?ver=2.6.7' media='all' />
+<link rel='stylesheet' id='gform_font_awesome-css' href='http://localhost/6.1.1/wp-content/plugins/gravityforms/assets/css/dist/font-awesome.min.css?ver=2.6.7' media='all' />
+<link rel='stylesheet' id='wp-mail-smtp-admin-bar-css' href='http://localhost/6.1.1/wp-content/plugins/wp-mail-smtp/assets/css/admin-bar.min.css?ver=3.7.0' media='all' />
+<link rel='stylesheet' id='esig-cc-users-admin-styles-css' href='http://localhost/6.1.1/wp-content/plugins/e-signature/add-ons/esig-cc-users/assets/css/esig_cc.css?ver=1.5.9' media='all' />
+<link rel='stylesheet' id='esig-sif-admin-styles-css' href='http://localhost/6.1.1/wp-content/plugins/e-signature/add-ons/esig-signer-input-fields/admin/assets/css/admin_input.css?ver=1.5.9' media='all' />
+<link rel='stylesheet' id='esig-sif-bootstrap-styles-css' href='http://localhost/6.1.1/wp-content/plugins/e-signature/add-ons/esig-signer-input-fields/admin/assets/css/pop-over.css?ver=1.5.9' media='all' />
+<link rel='stylesheet' id='esig-slv-admin-styles-css' href='http://localhost/6.1.1/wp-content/plugins/e-signature/add-ons/second-layer-vefication/assets/css/esig-slv-admin.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='esig-admin-style-css' href='http://localhost/6.1.1/wp-content/plugins/e-signature-business-add-ons/esig-add-templates/admin/assets/css/esig_template.css?ver=6.1.1' media='all' />
+<link rel='stylesheet' id='esig-reminders-admin-styles-css' href='http://localhost/6.1.1/wp-content/plugins/e-signature-business-add-ons/esig-signing-reminders/admin/assets/css/esig_reminders.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='esig-sad-admin-styles-css' href='http://localhost/6.1.1/wp-content/plugins/e-signature-business-add-ons/esig-stand-alone-docs/admin/assets/css/admin.css?ver=1.2.9' media='all' />
+<link rel='stylesheet' id='esig-url-admin-styles-css' href='http://localhost/6.1.1/wp-content/plugins/e-signature-business-add-ons/esig-url-redirect-after-signing/admin/assets/css/esig_url_redirect.css?ver=1.0.1' media='all' />
+<link rel='stylesheet' id='mediaelement-css' href='http://localhost/6.1.1/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.17' media='all' />
+<link rel='stylesheet' id='wp-mediaelement-css' href='http://localhost/6.1.1/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=6.1.1' media='all' />
+<link rel='stylesheet' id='imgareaselect-css' href='http://localhost/6.1.1/wp-includes/js/imgareaselect/imgareaselect.css?ver=0.9.8' media='all' />
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/localhost\/6.1.1\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.1.1"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode,e=(p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0),i.toDataURL());return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([129777,127995,8205,129778,127999],[129777,127995,8203,129778,127999])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<script id='bookingpress_admin_custom_js-js-extra'>
+var appoint_ajax_obj = {"ajax_url":"http:\/\/localhost\/6.1.1\/wp-admin\/admin-ajax.php"};
+</script>
+<script id='gform_gravityforms_admin_vendors-js-extra'>
+var gform_admin_i18n = {"formAdmin":{"toggleFeedInactive":"Inactive","toggleFeedActive":"Active"},"shortcodeUi":{"editForm":"Edit Form","insertForm":"Insert Form"}};
+var gform_admin_config = {"block_editor":{"data":{"is_block_editor":false},"i18n":{"insert_gform_block_title":"Add Block To Page","insert_gform_block_content":"Click or drag the Gravity Forms Block into the page to insert the form you selected. %1$sLearn More.%2$s"},"urls":{"block_docs":"https:\/\/docs.gravityforms.com\/gravity-forms-gutenberg-block\/"}},"components":{"merge_tags":{"i18n":{"insert_merge_tags":"Insert Merge Tags","search_merge_tags":"Search Merge Tags"}}},"admin_save_form":{"data":{"is_form_editor":false,"is_quick_editor":false,"form":false,"json_containers":["GFORMS_SAVE_REQUEST_JSON_START","GFORMS_SAVE_REQUEST_JSON_END"]},"endpoints":{"admin_save_form":{"action":"admin_save_form","nonce":"47170cba45"}}},"form_editor":{"choices_ui":{"data":[],"i18n":{"description":"Define the choices for this field. If the field type supports it you will also be able to select the default choice(s) to the left of the choice.","title":"Choices","expandableTitle":"Expand the Choices window"}}},"form_editor_save_form":{"data":{"selectors":{"successNotification":".gf_editor_status","failureNotification":".gf_editor_error","saveInProgress":".save-in-progress","stateElements":[".update-form-ajax"],"saveAnimationButtons":[".update-form-ajax"]},"domEvents":[{"name":"SaveRequested","action":"click","elementSelector":".update-form-ajax"},{"name":"SaveRequested","action":"keydown","elementSelector":"document","keys":[83,17,16]}],"animationDelay":"1000","json_containers":["GFORMS_SAVE_REQUEST_JSON_START","GFORMS_SAVE_REQUEST_JSON_END"],"urls":{"formPreview":"http:\/\/localhost\/6.1.1\/?gf_page=preview&id=%s"},"registeredAddons":["GFEsignAddOn"]},"endpoints":{"form_editor_save_form":{"action":"form_editor_save_form","nonce":"1cbe8b8d01"}},"i18n":{"formUpdated":"Form Updated","viewForm":"View Form","genericError":"An error occurred while saving the form.","networkError":"Request failed due to a network error. Please check your internet connection.","genericSuccess":"Form was updated successfully.","saveInProgress":"Saving","saveForm":"Save Form","saved":"Saved","ajaxErrorDialogCancelButtonText":"Cancel","ajaxErrorDialogCloseButtonTitle":"Close","ajaxErrorDialogConfirmButtonText":"Save","ajaxErrorDialogContent":"There was an error saving your form. To avoid losing your work, click the Save button to save your form and reload the page.","ajaxErrorDialogTitle":"Save Error."}},"form_settings":{"loader":{"i18n":{"loaderText":"Loading"}}}};
+</script>
+
+<script>
+/* <![CDATA[ */
+var userSettings = {"url":"\/6.1.1\/","uid":"1","time":"1676362112","secure":""};/* ]]> */
+</script>
+<script src='http://localhost/6.1.1/wp-admin/load-scripts.php?c=1&amp;load%5Bchunk_0%5D=jquery-core,jquery-migrate,utils,jquery-ui-core,jquery-ui-tooltip,moxiejs,plupload&amp;ver=6.1.1'></script>
+<script src='http://localhost/6.1.1/wp-content/plugins/bookingpress-appointment-booking/js/bookingpress_admin_custom.js?ver=1.0.51' id='bookingpress_admin_custom_js-js'></script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature/assets/js/bootstrap/bootstrap.min.js?ver=3.2.0' id='e-signature-bootstrap-scripts-js'></script>
+<script src='http://localhost/6.1.1/wp-content/plugins/gravityforms/assets/js/dist/vendor-admin.min.js?ver=f6decc533aaa033bc66d75509ee0f36f' id='gform_gravityforms_admin_vendors-js'></script>
+<script src='http://localhost/6.1.1/wp-content/plugins/gravityforms/assets/js/dist/utils.min.js?ver=f1954b86732971a1f48b526d29500629' id='gform_gravityforms_utils-js'></script>
+<script src='http://localhost/6.1.1/wp-content/plugins/gravityforms/assets/js/dist/admin-components.min.js?ver=c9a69cd36848c78e770b20c7a7862eff' id='gform_gravityforms_admin_components-js'></script>
+<script src='http://localhost/6.1.1/wp-content/plugins/gravityforms/js/vendor/simplebar.js?ver=2.6.7' id='gform_simplebar-js'></script>
+<script src='http://localhost/6.1.1/wp-content/plugins/gravityforms/js/tooltip_init.min.js?ver=2.6.7' id='gform_tooltip_init-js'></script>
+<script src='http://localhost/6.1.1/wp-content/plugins/bookingpress-appointment-booking-pro/js/bookingpress_pro_admin_custom.js?ver=1.6.1' id='bookingpress_pro_admin_custom_js-js'></script>
+<!--[if lt IE 8]>
+<script src='http://localhost/6.1.1/wp-includes/js/json2.min.js?ver=2015-05-03' id='json2-js'></script>
+<![endif]-->
+		<style>
+			.gf-notice {
+				display: none;
+			}
+			#gf-admin-notices-wrapper .gf-notice,
+			#gf-wordpress-notices {
+				display: block;
+			}
+		</style>
+				<style>
+			.gforms-menu-icon {
+				float: left;
+				width: 26px !important;
+				height: 30px !important;
+				background-repeat: no-repeat;
+				background-position: 0 6px;
+				background-size: 20px;
+			}
+
+			@media screen and ( max-width: 782px ) {
+				#wpadminbar #wp-admin-bar-gform-forms .ab-item {
+					line-height: 53px;
+					height: 46px !important;
+					width: 52px !important;
+					display: block;
+					background-size: 36px 36px;
+					background-position: 7px 6px;
+				}
+
+				#wpadminbar li#wp-admin-bar-gform-forms {
+					display: block;
+				}
+
+			}
+		</style>
+		<style>a.wp-mail-smtp-sidebar-upgrade-pro { background-color: #00a32a !important; color: #fff !important; font-weight: 600 !important; }</style><script type="text/javascript">var _wpColorScheme = {"icons":{"base":"#a7aaad","focus":"#72aee6","current":"#fff"}};</script>
+	<link id="wp-admin-canonical" rel="canonical" href="http://localhost/6.1.1/wp-admin/admin.php?post_type=esign&#038;page=esign-edit-document&#038;document_id=290" />
+	<script>
+		if ( window.history.replaceState ) {
+			window.history.replaceState( null, null, document.getElementById( 'wp-admin-canonical' ).href + window.location.hash );
+		}
+	</script>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"><style media="print">#wpadminbar { display:none; }</style>
+	</head>
+<body class="wp-admin wp-core-ui no-js gform-admin admin_page_esign-edit-document auto-fold admin-bar post-type-esign branch-6-1 version-6-1-1 admin-color-fresh locale-en-us no-customize-support no-svg">
+<script type="text/javascript">
+	document.body.className = document.body.className.replace('no-js','js');
+</script>
+
+	<script>
+		(function() {
+			var request, b = document.body, c = 'className', cs = 'customize-support', rcs = new RegExp('(^|\\s+)(no-)?'+cs+'(\\s+|$)');
+
+				request = true;
+	
+			b[c] = b[c].replace( rcs, ' ' );
+			// The customizer requires postMessage and CORS (if the site is cross domain).
+			b[c] += ( window.postMessage && request ? ' ' : ' no-' ) + cs;
+		}());
+	</script>
+	
+<div id="wpwrap">
+
+<div id="adminmenumain" role="navigation" aria-label="Main menu">
+<a href="#wpbody-content" class="screen-reader-shortcut">Skip to main content</a>
+<a href="#wp-toolbar" class="screen-reader-shortcut">Skip to toolbar</a>
+<div id="adminmenuback"></div>
+<div id="adminmenuwrap">
+<ul id="adminmenu">
+
+
+	<li class="wp-first-item wp-has-submenu wp-not-current-submenu menu-top menu-top-first menu-icon-dashboard menu-top-last" id="menu-dashboard">
+	<a href='index.php' class="wp-first-item wp-has-submenu wp-not-current-submenu menu-top menu-top-first menu-icon-dashboard menu-top-last" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class='wp-menu-image dashicons-before dashicons-dashboard' aria-hidden='true'><br /></div><div class='wp-menu-name'>Dashboard</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Dashboard</li><li class="wp-first-item"><a href='index.php' class="wp-first-item">Home</a></li><li><a href='update-core.php'>Updates <span class="update-plugins count-3"><span class="update-count">3</span></span></a></li></ul></li>
+	<li class="wp-not-current-submenu wp-menu-separator" aria-hidden="true"><div class="separator"></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-post open-if-no-js menu-top-first" id="menu-posts">
+	<a href='edit.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-post open-if-no-js menu-top-first" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class='wp-menu-image dashicons-before dashicons-admin-post' aria-hidden='true'><br /></div><div class='wp-menu-name'>Posts</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Posts</li><li class="wp-first-item"><a href='edit.php' class="wp-first-item">All Posts</a></li><li><a href='post-new.php'>Add New</a></li><li><a href='edit-tags.php?taxonomy=category'>Categories</a></li><li><a href='edit-tags.php?taxonomy=post_tag'>Tags</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-media" id="menu-media">
+	<a href='upload.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-media" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class='wp-menu-image dashicons-before dashicons-admin-media' aria-hidden='true'><br /></div><div class='wp-menu-name'>Media</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Media</li><li class="wp-first-item"><a href='upload.php' class="wp-first-item">Library</a></li><li><a href='media-new.php'>Add New</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top toplevel_page_gf_edit_forms" id="toplevel_page_gf_edit_forms"><a href='admin.php?page=gf_edit_forms' class="wp-has-submenu wp-not-current-submenu menu-top toplevel_page_gf_edit_forms" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class='wp-menu-image svg' style="background-image:url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHdpZHRoPSIyMSIgaGVpZ2h0PSIyMSIgdmlld0JveD0iMCAwIDIxIDIxIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxtYXNrIGlkPSJtYXNrMCIgbWFzay10eXBlPSJhbHBoYSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMiIgeT0iMSIgd2lkdGg9IjE3IiBoZWlnaHQ9IjIwIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTExLjU5MDYgMi4wMzcwM0wxNy4xNzkzIDUuNDQ4MjRDMTcuODk0IDUuODg0IDE4LjQ3NjcgNi45NTI5OCAxOC40NzY3IDcuODI0NTFWMTQuNjUwM0MxOC40NzY3IDE1LjUxODUgMTcuODk0IDE2LjU4NzQgMTcuMTc5MyAxNy4wMjMyTDExLjU5MDYgMjAuNDMxQzEwLjg3OTIgMjAuODY2OCA5LjcxMDU1IDIwLjg2NjggOC45OTkwOSAyMC40MzFMMy40MTA0MSAxNy4wMTk4QzIuNjk1NzMgMTYuNTg0IDIuMTEzMDQgMTUuNTE4NSAyLjExMzA0IDE0LjY0NjlWNy44MjExQzIuMTEzMDQgNi45NTI5OCAyLjY5ODk1IDUuODg0IDMuNDEwNDEgNS40NDgyNEw4Ljk5OTA5IDIuMDM3MDNDOS43MTA1NSAxLjYwMTI2IDEwLjg3OTIgMS42MDEyNiAxMS41OTA2IDIuMDM3MDNaTTE1Ljc0OTQgOS4zNzUwM0g4LjgxMDQ5QzguMzgyOTkgOS4zNzUwMyA4LjA2MjM3IDkuNTAxNjQgNy44MDkwNCA5Ljc3MDY4QzcuMjU0ODggMTAuMzYwMiA2Ljk2MTk2IDExLjUwMzYgNi45MTg0MiAxMi4xNDA2SDEzLjc1MDVWMTAuNDI3NUgxNS43MDE5VjE0LjA5MTJINC44NDAzMUM0Ljg0MDMxIDE0LjA5MTIgNC44Nzk4OSAxMC4wMzk3IDYuMzkxOTcgOC40MzMzOUM3LjAxNzM4IDcuNzY0NzUgNy44NDA3IDcuNDI0NDkgOC44MzAyOCA3LjQyNDQ5SDE1Ljc0OTRWOS4zNzUwM1oiIGZpbGw9IndoaXRlIi8+PC9tYXNrPjxnIG1hc2s9InVybCgjbWFzazApIj48cmVjdCB4PSIwLjI5NDkyMiIgeT0iMC43NTc4MTIiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iI2EwYTVhYSIvPjwvZz48L3N2Zz4=')" aria-hidden='true'><br /></div><div class='wp-menu-name'>Forms<span title='Update Available' class='update-plugins count-1'><span class='update-count'>&#49;</span></span></div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Forms<span title='Update Available' class='update-plugins count-1'><span class='update-count'>&#49;</span></span></li><li class="wp-first-item"><a href='admin.php?page=gf_edit_forms' class="wp-first-item">Forms</a></li><li><a href='admin.php?page=gf_new_form'>New Form</a></li><li><a href='admin.php?page=gf_entries'>Entries</a></li><li><a href='admin.php?page=gf_settings'>Settings</a></li><li><a href='admin.php?page=gf_export'>Import/Export</a></li><li><a href='admin.php?page=gf_addons'>Add-Ons</a></li><li><a href='admin.php?page=gf_system_status'>System Status</a></li><li><a href='admin.php?page=gf_help'>Help</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">
+	<a href='edit.php?post_type=page' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class='wp-menu-image dashicons-before dashicons-admin-page' aria-hidden='true'><br /></div><div class='wp-menu-name'>Pages</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Pages</li><li class="wp-first-item"><a href='edit.php?post_type=page' class="wp-first-item">All Pages</a></li><li><a href='post-new.php?post_type=page'>Add New</a></li></ul></li>
+	<li class="wp-not-current-submenu menu-top menu-icon-comments" id="menu-comments">
+	<a href='edit-comments.php' class="wp-not-current-submenu menu-top menu-icon-comments" ><div class="wp-menu-arrow"><div></div></div><div class='wp-menu-image dashicons-before dashicons-admin-comments' aria-hidden='true'><br /></div><div class='wp-menu-name'>Comments <span class="awaiting-mod count-0"><span class="pending-count" aria-hidden="true">0</span><span class="comments-in-moderation-text screen-reader-text">0 Comments in moderation</span></span></div></a></li>
+	<li class="wp-not-current-submenu menu-top toplevel_page_bookingpress_wizard menu-top-last" id="toplevel_page_bookingpress_wizard">
+	<a href='admin.php?page=bookingpress_wizard' class="wp-not-current-submenu menu-top toplevel_page_bookingpress_wizard menu-top-last" ><div class="wp-menu-arrow"><div></div></div><div class='wp-menu-image dashicons-before' aria-hidden='true'><img src="http://localhost/6.1.1/wp-content/plugins/bookingpress-appointment-booking/images/bookingpress_menu_icon.png" alt="" /></div><div class='wp-menu-name'>BookingPress</div></a></li>
+	<li class="wp-not-current-submenu wp-menu-separator" aria-hidden="true"><div class="separator"></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-appearance menu-top-first" id="menu-appearance">
+	<a href='themes.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-appearance menu-top-first" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class='wp-menu-image dashicons-before dashicons-admin-appearance' aria-hidden='true'><br /></div><div class='wp-menu-name'>Appearance</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Appearance</li><li class="wp-first-item"><a href='themes.php' class="wp-first-item">Themes <span class="update-plugins count-0"><span class="theme-count">0</span></span></a></li><li><a href='site-editor.php'>Editor <span class="awaiting-mod">beta</span></a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-plugins" id="menu-plugins">
+	<a href='plugins.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-plugins" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class='wp-menu-image dashicons-before dashicons-admin-plugins' aria-hidden='true'><br /></div><div class='wp-menu-name'>Plugins <span class="update-plugins count-15"><span class="plugin-count">15</span></span></div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Plugins <span class="update-plugins count-15"><span class="plugin-count">15</span></span></li><li class="wp-first-item"><a href='plugins.php' class="wp-first-item">Installed Plugins</a></li><li><a href='plugin-install.php'>Add New</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-users" id="menu-users">
+	<a href='users.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-users" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class='wp-menu-image dashicons-before dashicons-admin-users' aria-hidden='true'><br /></div><div class='wp-menu-name'>Users</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Users</li><li class="wp-first-item"><a href='users.php' class="wp-first-item">All Users</a></li><li><a href='user-new.php'>Add New</a></li><li><a href='profile.php'>Profile</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tools" id="menu-tools">
+	<a href='tools.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tools" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class='wp-menu-image dashicons-before dashicons-admin-tools' aria-hidden='true'><br /></div><div class='wp-menu-name'>Tools</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Tools</li><li class="wp-first-item"><a href='tools.php' class="wp-first-item">Available Tools</a></li><li><a href='import.php'>Import</a></li><li><a href='export.php'>Export</a></li><li><a href='site-health.php'>Site Health <span class="menu-counter site-health-counter count-1"><span class="count">1</span></span></a></li><li><a href='export-personal-data.php'>Export Personal Data</a></li><li><a href='erase-personal-data.php'>Erase Personal Data</a></li><li><a href='theme-editor.php'>Theme File Editor</a></li><li><a href='plugin-editor.php'>Plugin File Editor</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-settings" id="menu-settings">
+	<a href='options-general.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-settings" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class='wp-menu-image dashicons-before dashicons-admin-settings' aria-hidden='true'><br /></div><div class='wp-menu-name'>Settings</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Settings</li><li class="wp-first-item"><a href='options-general.php' class="wp-first-item">General</a></li><li><a href='options-writing.php'>Writing</a></li><li><a href='options-reading.php'>Reading</a></li><li><a href='options-discussion.php'>Discussion</a></li><li><a href='options-media.php'>Media</a></li><li><a href='options-permalink.php'>Permalinks</a></li><li><a href='options-privacy.php'>Privacy</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top toplevel_page_wp-mail-smtp menu-top-last" id="toplevel_page_wp-mail-smtp"><a href='admin.php?page=wp-mail-smtp' class="wp-has-submenu wp-not-current-submenu menu-top toplevel_page_wp-mail-smtp menu-top-last" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class='wp-menu-image svg' style="background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9IiM5ZWEzYTgiIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDQzIDM0Ij48cGF0aCBkPSJNMC4wMDcsMy41ODVWMjAuNDIxcTAsMy41ODYsMy43NTEsMy41ODVMMjAsMjRWMTlIMzBWMTQuMDE0bDAuOTkxLTFMMzQsMTNWMy41ODVRMzQsMCwzMC4yNDksMEgzLjc1OFEwLjAwNywwLC4wMDcsMy41ODVoMFpNMy41MjQsNi4xNTdhMS40OSwxLjQ5LDAsMCwxLS41MDgtMC45MzUsMS41ODEsMS41ODEsMCwwLDEsLjI3NC0xLjIwOCwxLjQ0OSwxLjQ0OSwwLDAsMSwxLjA5NC0uNjYzLDEuNzU2LDEuNzU2LDAsMCwxLDEuMjUuMzEybDExLjQwOSw3LjcxNkwyOC4zNzQsMy42NjNhMS45NiwxLjk2LDAsMCwxLDEuMjg5LS4zMTIsMS41NDYsMS41NDYsMCwwLDEsMS4wOTQuNjYzLDEuNCwxLjQsMCwwLDEsLjI3MywxLjIwOCwxLjY3LDEuNjcsMCwwLDEtLjU0Ny45MzVMMTcuMDQzLDE3LjIyNVoiLz48cGF0aCBkPSJNMjIsMjhIMzJsLTAuMDA5LDQuNjI0YTEuMTI2LDEuMTI2LDAsMCwwLDEuOTIyLjhsOC4yNS04LjIzNmExLjEyNiwxLjEyNiwwLDAsMCwwLTEuNTk0bC04LjI1LTguMjQxYTEuMTI2LDEuMTI2LDAsMCwwLTEuOTIyLjh2NC44NjZMMjIsMjF2N1oiLz48L3N2Zz4=')" aria-hidden='true'><br /></div><div class='wp-menu-name'>WP Mail SMTP</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>WP Mail SMTP</li><li class="wp-first-item"><a href='admin.php?page=wp-mail-smtp' class="wp-first-item">Settings</a></li><li><a href='admin.php?page=wp-mail-smtp-logs'>Email Log</a></li><li><a href='admin.php?page=wp-mail-smtp-reports'>Email Reports</a></li><li><a href='admin.php?page=wp-mail-smtp-tools'>Tools</a></li><li><a href='admin.php?page=wp-mail-smtp-about'>About Us</a></li><li class="wp-mail-smtp-sidebar-upgrade-pro"><a href='https://wpmailsmtp.com/lite-upgrade/?utm_source=WordPress&#038;utm_medium=admin-menu&#038;utm_campaign=liteplugin&#038;utm_content=Upgrade%20to%20Pro' class="wp-mail-smtp-sidebar-upgrade-pro">Upgrade to Pro</a></li></ul></li>
+	<li class="wp-not-current-submenu wp-menu-separator" aria-hidden="true"><div class="separator"></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top toplevel_page_esign-docs menu-top-first menu-top-last" id="toplevel_page_esign-docs"><a href='admin.php?page=esign-docs' class="wp-has-submenu wp-not-current-submenu menu-top toplevel_page_esign-docs menu-top-first menu-top-last" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class='wp-menu-image dashicons-before' aria-hidden='true'><img src="http://localhost/6.1.1/wp-content/plugins/e-signature/assets/images/pen_icon.svg" alt="" /></div><div class='wp-menu-name'>E-Signature</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>E-Signature</li><li class="wp-first-item"><a href='admin.php?page=esign-docs' class="wp-first-item">My Documents</a></li><li><a href='admin.php?page=esign-view-document'>Add New Document</a></li><li><a href='admin.php?page=esign-settings'>Settings</a></li><li><a href='admin.php?page=esign-addons'>Add-ons&nbsp;<span class="update-plugins count-12"><span class="plugin-count">12</span></span></a></li><li><a href='admin.php?page=esign-systeminfo-about'>System Status</a></li></ul></li><li id="collapse-menu" class="hide-if-no-js"><button type="button" id="collapse-button" aria-label="Collapse Main menu" aria-expanded="true"><span class="collapse-button-icon" aria-hidden="true"></span><span class="collapse-button-label">Collapse menu</span></button></li></ul>
+</div>
+</div>
+<div id="wpcontent">
+
+		<div id="wpadminbar" class="nojq nojs">
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-menu-toggle'><a class='ab-item' href='#'><span class="ab-icon" aria-hidden="true"></span><span class="screen-reader-text">Menu</span></a></li><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://localhost/6.1.1/wp-admin/about.php'><span class="ab-icon" aria-hidden="true"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://localhost/6.1.1/wp-admin/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://wordpress.org/support/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/forums/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-site-name' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://localhost/6.1.1/'>Esignature 6.1.1</a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-site-name-default' class="ab-submenu"><li id='wp-admin-bar-view-site'><a class='ab-item' href='http://localhost/6.1.1/'>Visit Site</a></li></ul></div></li><li id='wp-admin-bar-updates'><a class='ab-item' href='http://localhost/6.1.1/wp-admin/update-core.php'><span class="ab-icon" aria-hidden="true"></span><span class="ab-label" aria-hidden="true">3</span><span class="screen-reader-text updates-available-text">3 updates available</span></a></li><li id='wp-admin-bar-comments'><a class='ab-item' href='http://localhost/6.1.1/wp-admin/edit-comments.php'><span class="ab-icon" aria-hidden="true"></span><span class="ab-label awaiting-mod pending-count count-0" aria-hidden="true">0</span><span class="screen-reader-text comments-in-moderation-text">0 Comments in moderation</span></a></li><li id='wp-admin-bar-new-content' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://localhost/6.1.1/wp-admin/post-new.php'><span class="ab-icon" aria-hidden="true"></span><span class="ab-label">New</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-new-content-default' class="ab-submenu"><li id='wp-admin-bar-new-post'><a class='ab-item' href='http://localhost/6.1.1/wp-admin/post-new.php'>Post</a></li><li id='wp-admin-bar-new-media'><a class='ab-item' href='http://localhost/6.1.1/wp-admin/media-new.php'>Media</a></li><li id='wp-admin-bar-new-page'><a class='ab-item' href='http://localhost/6.1.1/wp-admin/post-new.php?post_type=page'>Page</a></li><li id='wp-admin-bar-new-user'><a class='ab-item' href='http://localhost/6.1.1/wp-admin/user-new.php'>User</a></li><li id='wp-admin-bar-gravityforms-new-form'><a class='ab-item' href='http://localhost/6.1.1/wp-admin/admin.php?page=gf_new_form'>Form</a></li></ul></div></li><li id='wp-admin-bar-esign' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://localhost/6.1.1/wp-admin/admin.php?page=esign-docs'>E-Signature</a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-esign-default' class="ab-submenu"><li id='wp-admin-bar-esign-docsa'><a class='ab-item' href='http://localhost/6.1.1/wp-admin/admin.php?page=esign-docs'>My Documents</a></li><li id='wp-admin-bar-esign-docsb'><a class='ab-item' href='http://localhost/6.1.1/wp-admin/admin.php?page=esign-view-document'>Add New Document</a></li><li id='wp-admin-bar-esign-docsc'><a class='ab-item' href='http://localhost/6.1.1/wp-admin/admin.php?page=esign-settings'>Settings</a></li><li id='wp-admin-bar-esign-docsd'><a class='ab-item' href='http://localhost/6.1.1/wp-admin/admin.php?page=esign-addons'>Add-Ons</a></li><li id='wp-admin-bar-esign-docse'><a class='ab-item' href='https://wpe.approveme.com/priority-support/'>Premium Support</a></li></ul></div></li><li id='wp-admin-bar-gform-forms' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://localhost/6.1.1/wp-admin/admin.php?page=gf_edit_forms'><div class="ab-item gforms-menu-icon svg" style="background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHdpZHRoPSIyMSIgaGVpZ2h0PSIyMSIgdmlld0JveD0iMCAwIDIxIDIxIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxtYXNrIGlkPSJtYXNrMCIgbWFzay10eXBlPSJhbHBoYSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMiIgeT0iMSIgd2lkdGg9IjE3IiBoZWlnaHQ9IjIwIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTExLjU5MDYgMi4wMzcwM0wxNy4xNzkzIDUuNDQ4MjRDMTcuODk0IDUuODg0IDE4LjQ3NjcgNi45NTI5OCAxOC40NzY3IDcuODI0NTFWMTQuNjUwM0MxOC40NzY3IDE1LjUxODUgMTcuODk0IDE2LjU4NzQgMTcuMTc5MyAxNy4wMjMyTDExLjU5MDYgMjAuNDMxQzEwLjg3OTIgMjAuODY2OCA5LjcxMDU1IDIwLjg2NjggOC45OTkwOSAyMC40MzFMMy40MTA0MSAxNy4wMTk4QzIuNjk1NzMgMTYuNTg0IDIuMTEzMDQgMTUuNTE4NSAyLjExMzA0IDE0LjY0NjlWNy44MjExQzIuMTEzMDQgNi45NTI5OCAyLjY5ODk1IDUuODg0IDMuNDEwNDEgNS40NDgyNEw4Ljk5OTA5IDIuMDM3MDNDOS43MTA1NSAxLjYwMTI2IDEwLjg3OTIgMS42MDEyNiAxMS41OTA2IDIuMDM3MDNaTTE1Ljc0OTQgOS4zNzUwM0g4LjgxMDQ5QzguMzgyOTkgOS4zNzUwMyA4LjA2MjM3IDkuNTAxNjQgNy44MDkwNCA5Ljc3MDY4QzcuMjU0ODggMTAuMzYwMiA2Ljk2MTk2IDExLjUwMzYgNi45MTg0MiAxMi4xNDA2SDEzLjc1MDVWMTAuNDI3NUgxNS43MDE5VjE0LjA5MTJINC44NDAzMUM0Ljg0MDMxIDE0LjA5MTIgNC44Nzk4OSAxMC4wMzk3IDYuMzkxOTcgOC40MzMzOUM3LjAxNzM4IDcuNzY0NzUgNy44NDA3IDcuNDI0NDkgOC44MzAyOCA3LjQyNDQ5SDE1Ljc0OTRWOS4zNzUwM1oiIGZpbGw9IndoaXRlIi8+PC9tYXNrPjxnIG1hc2s9InVybCgjbWFzazApIj48cmVjdCB4PSIwLjI5NDkyMiIgeT0iMC43NTc4MTIiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iIzg4ODg4OCIvPjwvZz48L3N2Zz4=');"></div><span class="ab-label">Forms</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-gform-form-recent-forms' class="ab-submenu"><li id='wp-admin-bar-gform-form-2' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://localhost/6.1.1/wp-admin/admin.php?page=gf_edit_forms&#038;id=2'><span class="wp-admin-bar-arrow" aria-hidden="true"></span>GF issue with 0 entry</a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-gform-form-2-default' class="ab-submenu"><li id='wp-admin-bar-gform-form-2-edit'><a class='ab-item' href='http://localhost/6.1.1/wp-admin/admin.php?page=gf_edit_forms&#038;id=2'>Edit</a></li><li id='wp-admin-bar-gform-form-2-entries'><a class='ab-item' href='http://localhost/6.1.1/wp-admin/admin.php?page=gf_entries&#038;id=2'>Entries</a></li><li id='wp-admin-bar-gform-form-2-settings'><a class='ab-item' href='http://localhost/6.1.1/wp-admin/admin.php?page=gf_edit_forms&#038;view=settings&#038;subview=settings&#038;id=2'>Settings</a></li><li id='wp-admin-bar-gform-form-2-preview'><a class='ab-item' href='http://localhost/6.1.1/?gf_page=preview&#038;id=2'>Preview</a></li></ul></div></li><li id='wp-admin-bar-gform-form-1' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://localhost/6.1.1/wp-admin/admin.php?page=gf_edit_forms&#038;id=1'><span class="wp-admin-bar-arrow" aria-hidden="true"></span>GF display dropdown display</a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-gform-form-1-default' class="ab-submenu"><li id='wp-admin-bar-gform-form-1-edit'><a class='ab-item' href='http://localhost/6.1.1/wp-admin/admin.php?page=gf_edit_forms&#038;id=1'>Edit</a></li><li id='wp-admin-bar-gform-form-1-entries'><a class='ab-item' href='http://localhost/6.1.1/wp-admin/admin.php?page=gf_entries&#038;id=1'>Entries</a></li><li id='wp-admin-bar-gform-form-1-settings'><a class='ab-item' href='http://localhost/6.1.1/wp-admin/admin.php?page=gf_edit_forms&#038;view=settings&#038;subview=settings&#038;id=1'>Settings</a></li><li id='wp-admin-bar-gform-form-1-preview'><a class='ab-item' href='http://localhost/6.1.1/?gf_page=preview&#038;id=1'>Preview</a></li></ul></div></li></ul><ul id='wp-admin-bar-gform-forms-default' class="ab-submenu"><li id='wp-admin-bar-gform-forms-view-all'><a class='ab-item' href='http://localhost/6.1.1/wp-admin/admin.php?page=gf_edit_forms'>All Forms</a></li><li id='wp-admin-bar-gform-forms-new-form'><a class='ab-item' href='http://localhost/6.1.1/wp-admin/admin.php?page=gf_new_form'>New Form</a></li></ul></div></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-my-account' class="menupop with-avatar"><a class='ab-item' aria-haspopup="true" href='http://localhost/6.1.1/wp-admin/profile.php'>Howdy, <span class="display-name">admin</span><img alt='' src='http://1.gravatar.com/avatar/44e849a6b8da66ff691f5f5bda90fede?s=26&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/44e849a6b8da66ff691f5f5bda90fede?s=52&#038;d=mm&#038;r=g 2x' class='avatar avatar-26 photo' height='26' width='26' loading='lazy' decoding='async'/></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-user-actions' class="ab-submenu"><li id='wp-admin-bar-user-info'><a class='ab-item' tabindex="-1" href='http://localhost/6.1.1/wp-admin/profile.php'><img alt='' src='http://1.gravatar.com/avatar/44e849a6b8da66ff691f5f5bda90fede?s=64&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/44e849a6b8da66ff691f5f5bda90fede?s=128&#038;d=mm&#038;r=g 2x' class='avatar avatar-64 photo' height='64' width='64' loading='lazy' decoding='async'/><span class='display-name'>admin</span></a></li><li id='wp-admin-bar-edit-profile'><a class='ab-item' href='http://localhost/6.1.1/wp-admin/profile.php'>Edit Profile</a></li><li id='wp-admin-bar-logout'><a class='ab-item' href='http://localhost/6.1.1/wp-login.php?action=logout&#038;_wpnonce=c2b6ef8d63'>Log Out</a></li></ul></div></li></ul>			</div>
+						<a class="screen-reader-shortcut" href="http://localhost/6.1.1/wp-login.php?action=logout&#038;_wpnonce=c2b6ef8d63">Log Out</a>
+					</div>
+
+		
+<div id="wpbody" role="main">
+
+<div id="wpbody-content">
+		<div id="screen-meta" class="metabox-prefs">
+
+			<div id="contextual-help-wrap" class="hidden no-sidebar" tabindex="-1" aria-label="Contextual Help Tab">
+				<div id="contextual-help-back"></div>
+				<div id="contextual-help-columns">
+					<div class="contextual-help-tabs">
+						<ul>
+												</ul>
+					</div>
+
+					
+					<div class="contextual-help-tabs-wrap">
+											</div>
+				</div>
+			</div>
+				</div>
+		<div id="esig-sif-admin-panel" style="display:none;">
+    <div class="esig-sif-main-panels">
+                <!-- textbox panel start here  -->
+        <div class="esigpanel esig-sif-panel-textfield" style="display:none;">
+            <div class="sif_popup_container">
+                <div class="sif_popup_left">
+                    <div class="sif_text_signer_info"> </div>
+                    <div class="sif_text_placeholder_Text">
+                        Enter your placeholder text<br>
+                        <input type="text" name="textbox" value="" placeholder="Placeholder Text">
+                    </div>
+                </div>
+                <div class="sif_popup_right" valign="top">
+                    <!-- textbox advanced area -->
+                    <div class="sif_advanced_button_area" align="right">
+                        <button id="sif_textbox_advanced_button" class="advanced-button esig-icon-settings">
+                            Advanced                        </button>
+                    </div>
+                    <!-- others area start here -->
+                    <div class="sif_others_area">
+                        <input type="checkbox" class="required" name="required" checked>Required                    </div>
+                </div>
+            </div>
+            <p style="clear: both;"></p>
+            <div align="left">
+
+                <select id="text_field_display_type" style="width:460px">
+                    <option value="border">Create a border around submitted results</option>
+                    <option value="underline">Underline submitted results</option>
+                    <option value="plaintext">Display the submitted results as plain text(no border or underline)</option>
+                </select>
+
+            </div>
+
+            <div class="popup_submit_area" align="center">
+                <a class="esig-mini-btn esig-blue-btn insert-btn display-type">
+                    Insert Text Field                </a>
+            </div>
+
+            <div id="sif_textbox_advanced_content" class="sif_textbox_advanced_content" style="display:none;">
+            Max Width: <input type="text" id="maxsize" name="textbox_width" size="4" value="">Px                <br>
+                <br>
+                Field Type <br>
+                <input type="radio" id="esig-sif-textfield-option" value="text" name="esig_textfield_option"> Default                <input type="radio" id="esig-sif-textfield-option" value="number" name="esig_textfield_option"> Number                <input type="radio" id="esig-sif-textfield-option" value="email" name="esig_textfield_option"> E-mail                <input type="radio" id="esig-sif-textfield-option" value="url" name="esig_textfield_option"> Url                <hr width="100%">
+                <span class="sif-advanced-text">
+                    Tips: you can adjust the size of your text field by using the text box above. See the result in real time                </span>
+            </div>
+
+            <div id="esign-sif-signer-msg" class="esig-sif-signer-message" style="display:none;">
+                *You must assign this field to a specific signer.<br>
+                Please select a signer from the dropdown and try again.            </div>
+            <div id="esign-sif-size-msg" class="esig-sif-signer-message" style="display:none;">
+                *You must input only number in input field size..            </div>
+        </div>
+        <!-- ************** textbox panel end here ************ -->
+
+        <!-- ############# file upload panel start here ############ -->
+        <div class="esigpanel esig-sif-panel-file" style="display:none;">
+            <p class="sif-file-upload-instructions">
+                Allow your signer to upload a file to your document            </p>
+            <div class="sif_popup_main_file">
+                <div class="esig-sif-popup-left">
+                    <div class="sif_file_signer_info"> </div>
+                    <div class="esig-table">
+                    Enter your field label                        <a href="#" class="tooltip">
+                            <img src="http://localhost/6.1.1/wp-content/plugins/e-signature/assets/images/help.png" height="17px" width="17px" align="left" />
+                            <span class="file-upload-tooltip">
+                                A field label is text that will live above your file upload form.                            </span>
+                        </a>
+                        <br>
+                        <input type="text" name="filelabel" placeholder="optional" value="">
+                    </div>
+
+                </div>
+                <div class="esig-sif-popup-right">
+                    <!-- textbox advanced area -->
+                    <div id="sif-file-advanced-button" class="sif_advanced_button_area" align="right">
+                        <button id="sif_file_advanced_button" class="advanced-button esig-icon-settings">
+                            Advanced                        </button>
+                    </div>
+                    <!-- others area start here -->
+                    <div class="sif_others_area">
+                        <input type="checkbox" class="required" name="required" checked>Required                    </div>
+                </div>
+            </div> <!-- sif popup main file end here  -->
+            <div style="display:inline-flex;margin:15px 0;">
+                <a href="#" class="tooltip">
+                    <img src="http://localhost/6.1.1/wp-content/plugins/e-signature/assets/images/help.png" height="17px" width="17px" align="left" />
+                    <span class="file-upload-tooltip">
+                        Allowed file extensions for file uploads.  This will limit the type of files a user can upload.                    </span>
+                </a>
+                Allowed file extensions are jpg, jpeg, jpe, gif, png, pdf            </div>
+            <div style="margin:15% 0;" align="center">
+                <a class="esig-mini-btn esig-blue-btn insert-file">
+                    Insert Upload Form                </a>
+            </div>
+            <div class="sif_file_advanced_content" style="display:none;">
+            Max File Size:                <span id="esig-new-html">
+                    <input type="text" id="max-file-size" size="4" name="max_file_size" value="500">
+                </span>MB                <hr width="100%">
+                <span class="sif-advanced-text">
+                    Specify the maximum file size in megabytes allowed for the uploaded files.                </span>
+                <hr width="100%">
+                Maximum allowed in this server :<span id="esig-maximum-file-size"> 500 </span> MB            </div>
+
+            <div id="esign-sif-signer-msg" class="esig-sif-signer-message validate-msg" style="display:none;">
+                *You must assign this field to a specific signer.</br>
+                Please select a signer from the dropdown and try again.            </div>
+            <div id="esign-sif-extension-msg" class="esig-sif-signer-message validate-msg" style="display:none;">
+                *You must input file extension to a specific signer.            </div>
+
+        </div>
+        <!-- ********** file upload panel end here ************** -->
+
+        <!-- ############ text area panel start here ############### -->
+        <div class="esigpanel esig-sif-panel-textarea" style="display:none;">
+            <div class="sif_popup_container">
+                <div class="sif_popup_left">
+                    <div class="sif_textarea_signer_info"> </div>
+                    <div class="sif_textarea_placeholder_Text"><br />
+                        <em>Enter your placholder text below</em>
+                        <textarea id="esig-textarea-input" class="esig-sif-textarea-style area-small" name="textarea" cols="20" rows="5" placeholder="E.g. How tall are you?"></textarea>
+                    </div>
+                </div>
+                <div class="sif_popup_right" valign="top">
+                    <!-- textbox advanced area -->
+                    <div class="sif_advanced_button_area" align="right">
+                        <button id="sif_textarea_advanced_button" class="advanced-button esig-icon-settings">
+                            Advanced                        </button>
+                    </div>
+                    <!-- others area start here -->
+                    <div class="sif_others_area">
+                        <input type="checkbox" class="required" name="required" checked>Required                    </div>
+                </div>
+            </div>
+
+            <div class="" align="left">
+
+                <select id="text_area_display_type" style="width:460px">
+                    <option value="border">Create a border around submitted results</option>
+                    <option value="underline">Underline submitted results</option>
+                    <option value="plaintext">Display the submitted results as plain text(no border or underline)</option>
+                </select>
+
+            </div>
+
+            <div class="popup_submit_area" align="center">
+                <a class="esig-mini-btn esig-blue-btn insert-btn display-type">
+                    Insert Paragraph Text                </a>
+            </div>
+
+            <input type="hidden" id="text-area-size-temp" value="small">
+            <div class="sif_textarea_advanced_content" style="display:none;">
+                <div align="center">Field Size <br />
+                    <select name="esig_textarea_type" id="esig-textarea-size">
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="big">Big</option>
+                    </select>
+                </div>
+
+                <hr width="100%">
+                <span class="sif-advanced-text">
+                    Tips: you can adjust the size of your text area by using the option above. See the result in real time                </span>
+            </div>
+            <div id="esign-sif-signer-msg" class="esig-sif-signer-message" style="display:none;">
+                *You must assign this field to a specific signer.</br>
+                Please select a signer from the dropdown and try again.            </div>
+            <div id="esign-sif-size-msg" class="esig-sif-signer-message" style="display:none;">
+                *You must input only number in input field size..            </div>
+        </div>
+        <!-- ************ textarea panel end here *********** -->
+
+
+        <!-- ################## date panel start here ##############  -->
+
+        <div class="esigpanel esig-sif-panel-datepicker" style="display:none;">
+            <div align="center" class="esig-sif-popup-logo">
+                <img src="http://localhost/6.1.1/wp-content/plugins/e-signature/assets/images/logo.svg">
+            </div>
+            <p align="center" class="esig-sif-instructions">
+                Add a date picker for your signer to fill out.            </p>
+            <div class="sif_popup_main_datepicker">
+                <div class="sif_popup_left">
+
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6">
+                        Enter your field label (Optional)<br><br>
+                        <input type="text" name="datepickerlabel" value="">
+
+                        <br><br>
+                        <input type="checkbox" class="required" name="required" checked>Required                        <input type="checkbox" class="esig-picker-readonly" name="esig_datepicker_readonly" checked>Read only
+                    </div>
+                    <div class="col-sm-6">
+                        Custom date range (Optional)<br><br>
+                        Min date: <input type="text" id="esig-date-pick-mindate" placeholder="mm/dd/yyyy" name="datepickerstartdate" value=""><br><br>
+                        Max date: <input type="text" id="esig-date-pick-maxdate" placeholder="mm/dd/yyyy" name="datepickerenddate" value="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" style="margin-top: 1rem;" align="left">
+
+                <select id="datepicker_display_type" style="width:460px">
+                    <option value="border">Create a border around submitted results</option>
+                    <option value="underline">Underline submitted results</option>
+                    <option value="plaintext">Display the submitted results as plain text(no border or underline)</option>
+                </select>
+
+            </div>
+
+            <div class="container" style="margin-top: 1rem;" align="center">
+                <a class="esig-mini-btn esig-blue-btn insert-date display-type">
+                    Insert Date                </a>
+            </div>
+
+            <div id="esign-sif-signer-msg" class="esig-sif-signer-message" style="display:none;">
+                *You must assign this field to a specific signer.</br>
+                Please select a signer from the dropdown and try again.            </div>
+        </div>
+        <!-- ************* date panel end here ************ -->
+
+
+
+        <!-- ################## signed date panel start here ##############  -->
+
+        <div class="esigpanel esig-sif-panel-todaydate" style="display:none;">
+            <div align="center" class="esig-sif-popup-logo">
+                <img src="http://localhost/6.1.1/wp-content/plugins/e-signature/assets/images/logo.svg">
+            </div>
+            <p align="center" class="esig-sif-instructions">
+                Add a date field to fill automatically.            </p>
+            <div class="sif_popup_main_todaydate">
+                <div class="sif_popup_left">
+
+                </div>
+            </div>
+            <p></p>
+
+            <div class="container" align="left">
+
+                <select id="todaydate_display_type" style="width:460px">
+                    <option value="border">Create a border around submitted results</option>
+                    <option value="underline">Underline submitted results</option>
+                    <option value="plaintext">Display the submitted results as plain text(no border or underline)</option>
+                </select>
+
+            </div>
+
+            <div class="container" style="margin-top:25%" align="center">
+                <a class="esig-mini-btn esig-blue-btn insert-todaydate display-type">
+                    Insert signed date                </a>
+            </div>
+            <div id="esign-sif-signer-msg" class="esig-sif-signer-message" style="display:none;">
+                *You must assign this field to a specific signer.</br>
+                Please select a signer from the dropdown and try again.            </div>
+        </div>
+        <!-- ************* signed date panel end here ************ -->
+
+
+
+
+        <!-- ########## radio panel start here #################### -->
+        <div class="esigpanel esig-sif-panel-radio" style="display:none;">
+            <div class="sif_popup_container">
+                <div class="sif_popup_left">
+                    <div class="sif_radio_signer_info"> </div>
+                    <div class="sif_text_placeholder_Text">
+                         Enter your field label(Optional)<br>
+                        <input type="text" name="radiolabel" value=" ">
+                    </div>
+
+                </div>
+                <div class="sif_popup_right" valign="top">
+                    <!-- textbox advanced area -->
+                    <div class="sif_advanced_button_area">
+                        <button id="sif_radio_advanced_button" class="advanced-button esig-icon-settings">
+                            Advanced                        </button>
+                    </div>
+                    <!-- others area start here -->
+                    <div class="sif_others_area">
+                        <input type="checkbox" class="required" name="required" checked>Required                    </div>
+                </div>
+            </div>
+            <div class="esig-sif-title-box">
+                 Add Radio Buttons            </div>
+
+            <div class="radio_button">
+
+                <ul id="radio_html">
+
+                    <li>
+                        <input type="radio" onclick="esigRadioSif(this);" name="esig-radio-sif" />
+                        <input type="text" name="label[]" placeholder="Label" value="" />
+                        <input type="hidden" class="hidden_radio" name="" value="">
+                        <span class="esig-icon-plus" id="addRadio"></span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="popup_submit_area" align="center">
+                <a class="esig-mini-btn esig-blue-btn insert-btn">
+                    Insert Radio Buttons                </a>
+            </div>
+            <div class="sif_radio_advanced_content" style="display:none;text-align:justify;">
+                <div class="sif_alignment">
+                    <input type="radio" name="sif_radio_position" id="radio_vertical" checked value="vertical">Display vertically                    <span class="esig-default">
+                        (Default)                    </span>
+                    <br>
+                    <input type="radio" name="sif_radio_position" id="radio_horizontal" value="horizontal">Display horizontally                </div>
+               
+            </div>
+
+            <div id="esign-sif-signer-msg" class="esig-sif-signer-message" style="display:none;">
+                *You must assign this field to a specific signer.</br>
+                Please select a signer from the dropdown and try again.            </div>
+        </div>
+        <!-- ********************* Radio panel end here ***************** -->
+
+
+        <!-- ################ checkbox start here ###################### -->
+        <div class="esigpanel esig-sif-panel-checkbox" style="display:none;">
+            <div class="sif_popup_container">
+                <div class="sif_popup_left">
+                    <div class="sif_checkbox_signer_info"> </div>
+                    <div class="sif_text_placeholder_Text">
+                        Enter your field label(Optional)<br>
+                        <input type="text" name="checkboxlabel" value="">
+                    </div>
+
+                </div>
+                <div class="sif_popup_right" valign="top">
+                    <!-- textbox advanced area -->
+                    <div id="sif-checkbox-advanced-button" class="sif_advanced_button_area">
+                        <button id="sif_checkbox_advanced_button" class="advanced-button esig-icon-settings">
+                            Advanced                        </button>
+                    </div>
+                    <!-- others area start here -->
+                    <div class="sif_others_area">
+                        <input type="checkbox" class="required" name="required" checked>Required                    </div>
+                </div>
+            </div>
+
+            <div class="esig-sif-title-box"> Add Checkbox Buttons</div>
+
+            <div class="checkbox_button">
+                <ul id="checkbox_html-rupom">
+
+                    <li>
+                        <input type="checkbox" name="" />
+                        <input type="text" name="label[]" placeholder="Label" value="" />
+                        <input type="hidden" class="hidden_checkbox" name="" value="">
+                        <span class="esig-icon-plus" id="addCheckbox"> </span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="popup_submit_area" align="center">
+                <a class="esig-mini-btn esig-blue-btn insert-btn">
+                    Insert Checkboxes Buttons                </a>
+            </div>
+            <div class="sif_checkbox_advanced_content" style="display:none;">
+                <div class="sif_alignment">
+                    <input type="radio" name="sif_checkbox_position" id="box-vertical" checked value="vertical">Display vertically                    <span class="esig-default">(Default)</span> <br>
+                    <input type="radio" name="sif_checkbox_position" id="box-horizontal" value="horizontal">Display horizontally                </div>
+            </div>
+
+            <div id="esign-sif-signer-msg" class="esig-sif-signer-message" style="display:none;">
+                *You must assign this field to a specific signer.</br>
+                Please select a signer from the dropdown and try again.            </div>
+        </div>
+        <!-- *******************checkbox end here ********************** -->
+
+
+        <!-- sif dropdown menu start here  -->
+
+
+        <div class="esigpanel esig-sif-panel-dropdown" style="display:none;">
+            <div class="sif_popup_container">
+                <div class="sif_popup_left">
+                    <div class="sif_dropdown_signer_info"> </div>
+                    <div class="sif_text_placeholder_Text">
+                        Enter your field label(Optional)<br>
+                        <input type="text" name="dropdownlabel" value="">
+                    </div>
+
+                </div>
+                <div class="sif_popup_right" valign="top">
+                    <!-- others area start here -->
+                    <div class="sif_others_area">
+                        <input type="checkbox" class="required" name="required" checked>Required                    </div>
+                </div>
+
+            </div>
+
+            <div class="esig-sif-title-box"> Add Dropdown option</div>
+
+            <div class="dropdown_button">
+                <ul id="dropdown_html-rupom">
+                    <li>
+                        <input type="text" name="label[]" placeholder="Label" value="" />
+                        <input type="hidden" class="hidden_dropdown" name="" value="">
+                        <span class="esig-icon-plus" id="addDropdown"> </span>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="popup_submit_area" align="center">
+                <a class="esig-mini-btn esig-blue-btn insert-btn">
+                    Insert Dropdown                </a>
+            </div>
+
+            <div id="esign-sif-signer-msg" class="esig-sif-signer-message" style="display:none;">
+                *You must assign this field to a specific signer.</br>
+                Please select a signer from the dropdown and try again.            </div>
+        </div>
+        <!-- sif dropdown menu end here -->
+    </div>
+
+
+
+</div><div class="wrap"><div id="poststuff"><div id="post-body" class="metabox-holder columns-2"><div id="post-body-content" style="position: relative;"><div id="page-loader-admin" class="cf" style="display:none;">
+    <div class="span">
+        <h2 class="cf"> esig , we're preparing your document... sip some coffee (or tea) while you wait </h2>
+        <div class="coffee_cup"></div>
+    </div>
+</div>
+
+
+<h2 class="esign-form-header">1. Enter your documents name</h2>
+
+<form method="post" class="form-horizontal document-form " id="document_form" enctype="multipart/form-data">
+
+    
+    <input type="hidden" name="document_id" id="document_id" value="290" />
+
+    <input type="hidden" name="document_action" id="document_action" value="" />
+
+
+    <div id="titlediv">
+        <div id="titlewrap">
+            <input type="text" name="document_title" id="document-title" size="30" placeholder="Enter the document's name here" class="text-input span4" value="" />
+        </div>
+    </div>
+
+
+    <div class="add_form_matt">
+        <h2 class="esign-form-header">2. What needs to be signed? <span class="settings-title">(copy and paste the content below)</span></h2>
+
+        <div id="wp-document_content-wrap" class="wp-core-ui wp-editor-wrap tmce-active"><link rel='stylesheet' id='editor-buttons-css' href='http://localhost/6.1.1/wp-includes/css/editor.min.css?ver=6.1.1' media='all' />
+<div id="wp-document_content-editor-tools" class="wp-editor-tools hide-if-no-js"><div id="wp-document_content-media-buttons" class="wp-media-buttons"><button type="button" id="insert-media-button" class="button insert-media add_media" data-editor="document_content"><span class="wp-media-buttons-icon"></span> Add Media</button></div>
+<div class="wp-editor-tabs"><button type="button" id="document_content-tmce" class="wp-switch-editor switch-tmce" data-wp-editor-id="document_content">Visual</button>
+<button type="button" id="document_content-html" class="wp-switch-editor switch-html" data-wp-editor-id="document_content">Text</button>
+</div>
+</div>
+<div id="wp-document_content-editor-container" class="wp-editor-container"><div id="qt_document_content_toolbar" class="quicktags-toolbar hide-if-no-js"></div><textarea class="wp-editor-area" rows="20" autocomplete="off" cols="40" name="document_content" id="document_content"></textarea></div>
+</div>
+
+    </div>
+
+        <!-- Start of Meta Box -->
+    <div id="postimagediv" class="postbox esign-form-panel">
+        <h3 class="hndle esig-section-title"> <span>Document Options</span></h3>
+
+        <div class="esig-inside" style="margin-top: 10px;">
+
+            <div class="container-fluid noPadding">
+
+                
+
+                <p>
+
+                    <a href="#" class="tooltip">
+                        <img src="http://localhost/6.1.1/wp-content/plugins/e-signature/assets/images/help.png" height="20px" width="20px" align="left" />
+                        <span>
+                            Receive an email notification everytime a signature is added to this document.                        </span>
+                    </a>
+                    <input type="checkbox"  id="notify" name="notify"><label class="leftPadding-5">Notify me when a signature is added</label>
+                    <p style="padding-left:100px;display:none;" id="esig-notification-settings"><input type="checkbox" id="esig_stop_email_after_sign" name="esig_stop_email_after_sign"  value="1">After the document is signed, STOP sending me emails when it is viewed.</p>
+                </p>
+
+                <p>
+                    <a href="#" class="tooltip">
+                        <img src="http://localhost/6.1.1/wp-content/plugins/e-signature/assets/images/help.png" height="20px" width="20px" align="left" />
+                        <span>
+                            Selecting this option will automatically attach your signature from the WP E-Signature admin panel to this document.                        </span>
+                    </a>
+                                        <input type="checkbox"   id="add_signature" onclick='javascript:return true;'  name="add_signature"><label id="esig-auto-add-signature-label" class="leftPadding-5">Automatically add my (esig team) signature to this document.</label>
+                </p>
+
+
+                
+			<p id="stand_alone_style" style="">
+					<input type="checkbox" CHECKED id="stand_alone" name="stand_alone"> This is a Stand Alone document
+			</p>
+			<p>
+			<div id="stand_alone_options" class="stand_alone_options" style="">
+				<span>
+				<a href="#" class="tooltip">
+					<img src="http://localhost/6.1.1/wp-content/plugins/e-signature/assets/images/help.png" height="20px" width="20px" align="left" />
+					<span>
+						Please select the page on your website where your Stand Alone Document will live.  You can invite signers to sign this document once you publish it.				
+					</span>
+					</a>
+					Display on this page:</span> <div>
+				<select id="stand_alone_page" class="esig-select2" style="width:300px;" data-placeholder="Select a page..." name="stand_alone_page" data-original="">
+<option value="none">Select a page...</option>
+<option value="118"  data-used="210"  >"Timestamp" and "Audit" is not displaying</option>
+<option value="98"  data-used="106"  >Added Options values displaying as a label on "Signing" and "Signed" page with "Display label" option</option>
+<option value="154"   >Book an Appointment</option>
+<option value="157"   >Cancel page</option>
+<option value="158"   >Cancel Payment page</option>
+<option value="49"   >Cart</option>
+<option value="19"   >cf7 preview</option>
+<option value="50"   >Checkout</option>
+<option value="159"   >Complete Payment</option>
+<option value="45"  data-used="54"  >Fluent Forms container bugs</option>
+<option value="104"  data-used="161"  >Fluent Forms container bugs final testing</option>
+<option value="146"  data-used="283"  >Formidable Forms date field format</option>
+<option value="11"  data-used="2"  >Formidable Forms hidden field bug</option>
+<option value="23"  data-used="14"  >Forminator checkbox field</option>
+<option value="90"  data-used="97"  >Forminator checkbox field</option>
+<option value="38"  data-used="40"  >Forminator checkbox field 2</option>
+<option value="102"  data-used="116"  >Forminator checkbox field 5</option>
+<option value="100"   >forminator preview</option>
+<option value="144"  data-used="259"  >GF display dropdown display</option>
+<option value="150"  data-used="285"  >GF issue with 0 entry</option>
+<option value="122"  data-used="213"  >Global agreement with Add Woo shortcode for products_in_cart</option>
+<option value="129"   >Login</option>
+<option value="51"   >My account</option>
+<option value="155"   >My Bookings</option>
+<option value="14"  data-used="5"  >pdf storage localation verify</option>
+<option value="120"  data-used="212"  >Product agreement with add Woo shortcode for products_in_cart</option>
+<option value="2"   >Sample Page</option>
+<option value="48"   >Shop</option>
+<option value="156"   >Thank you</option>
+<option value="94"  data-used="99"  >We are still facing this same issue! Alignment is not correct for added values in "Radio " buttons field and "Checkboxes" field on "Signing", and "Signed" page with "IPAD" device</option>
+<option value="55"  data-used="58"  >Woo data in doc title {{order_id}}</option>
+<option value="79"  data-used="60"  >Woo data in doc title 2 {{order_id}}</option>
+<option value="115"  data-used="190"  >Woo data in doc title 7-02-2022 {{order_id}}</option>
+</select>
+
+				<div id="esig-sad-overwrite-modal" style="display:none;">
+					<div class="esig-sad-dialog-content">
+						There is already a Stand Alone document on this page. If you do not wish to overwrite it, please choose a different page.
+					</div>
+                </div>    <div class="sad-page-auto-creation-container">
+                            <div class="sad-auto-section-row">
+                                Or
+                            </div>
+                            <div class="esig-auto-page-checkbox">
+                                <input type="checkbox" id="stand-alone-auto-page" name="stand_alone_auto_page"> Create a new Wordpress page for this document.
+                            </div>
+                        </div></div></div>
+			</p>
+
+                <div id="esig-gravity-option" class="esign-form-panel" style="display:none;">
+        	        
+        	        
+                	               <div align="center"><img src="http://localhost/6.1.1/wp-content/plugins/e-signature/assets/images/logo.png" width="200px" height="45px" alt="Sign Documents using WP E-Signature" width="100%" style="text-align:center;"></div>
+                    			
+                                    
+                    				<div id="esig-gravity-form-first-step">
+                        				
+                                        	<div align="center" class="esig-popup-header esign-form-header">What Are You Trying To Do?</div>
+                                            	
+                        				<p id="create_gravity" align="center">
+                        			
+                        				<p id="select-gravity-form-list" align="center">
+                                	    
+                        		        <select data-placeholder="Choose a Option..." class="chosen-select" tabindex="2" id="esig-gravity-form-id" name="esig_gravity_form_id">
+                        			     <option value="sddelect">Select a Gravity Form</option><option value="1">GF display dropdown display</option><option value="2">GF issue with 0 entry</option></select>
+                                	    
+                        				</p>
+                         	  
+                                	    </p>
+                                	    
+                                        <p id="upload_gravity_button" align="center">
+                                           <a href="#" id="esig-gravity-create" class="button-primary esig-button-large">Next Step</a>
+                                         </p>
+                                     
+                                    </div>  <!-- Frist step end here  --> <!-- Gravity form second step start here -->
+                                            <div id="esig-gf-second-step" style="display:none;">
+                                            
+                                        	<div align="center" class="esig-popup-header esign-form-header">What gravity form field data would you like to insert?</div>
+                                            
+                                            <p id="esig-gf-field-option" align="center"> </p>
+                                            
+                                            <p id="select-gravity-field-display-type" align="center">
+                                	    
+                        		        <select data-placeholder="Choose a Option..." class="chosen-select" tabindex="2" id="esig-gravity-form-id" name="esig_gravity_value_display_type">
+                        			     <option value="value">Select a display type</option>
+                                          
+                                         
+                                           <option value="value">Display value</option>
+                                           <option value="label">Display label</option>
+                                           <option value="label_value">Display label + value</option></select>
+                                	    
+                        				</p>
+                                            
+                                             <p id="upload_gravity_button" align="center">
+                                           <a href="#" id="esig-gravity-insert" class="button-primary esig-button-large">Add to Document</a>
+                                         </p>
+                                            
+                                            </div>
+                                    <!-- Gravity form second step end here --></div><!--- gravity option end here --><div id="esig-access-code-verification" style="display:none" title="Security Verification">
+    
+        <input type="hidden" id="esig-slv-email-address">
+        
+                <div id="access_cssmenu">
+                    <ul>
+                        <li><a href="#none" id="esig-access-none" style="color: #DFDFDF;">NONE <br /></a></li>
+                        <li><a href="#access_code" id="esig-access-code" style="color: #DFDFDF;">ACCESS CODE</a></li>
+                    </ul>
+                </div>
+                <div class="tab">
+                    
+                    <div id="none" class="tab-content">
+                        <br><div class="slv-instructions">Hey  esig! You're gonna need to select your desired security verification to go to next step.</div>
+                        <input type="submit" value="Next Step" class="btn btn-info" id="verification_submit_send" name="nextstep"  disabled>
+                    </div>
+                    
+                    <div id="access_code" class="tab-content" style="display: none">
+                        <span id="heading2" class="slv-instructions">You are required to (manually) give this access code to your recipient</span><br>
+                       
+                        <div class="slv-access-inputs">
+                            <div> <label class="slv-label">Access Code:</label></div>
+                            <div> <input type="text" name="esig_access_code" id="esig_access_code" class="enter_access" value="" placeholder="Enter your access code"></div>
+                        </div>
+                        <div align="left" id="esig_verification" >
+                            <input type="submit" value="Next Step" id="submit_send_layer" name="Submit"><input align="center" type="submit" value="Cancel" class="esig-access-close" id="submit_send_cancel">
+                            
+                        </div>
+
+                    </div>
+                </div>
+  
+                
+</div><p id="esig_custom_message_option">
+			<a href="#" class="tooltip">
+					<img src="http://localhost/6.1.1/wp-content/plugins/e-signature/assets/images/help.png" height="20px" width="20px" align="left" />
+					<span>
+					Selecting this option allows you to easily insert a custom message in signer invitation e-mail
+					</span>
+					</a>
+				<input type="checkbox"  id="esig_custom_message" name="esig_custom_message" value="1"><label class="leftPadding-5">Add custom message to signer invite email</label>
+				<div id="esig-custom-message-input" style="display:none;padding-left:50px;"><textarea name="esig_custom_message_text" cols="100" rows="8" placeholder="Add a custom comment that will be inserted in the email sent to signers here....."></textarea></div>
+			</p><p id="esig_custom_message_option">
+			<a href="#" class="tooltip">
+					<img src="http://localhost/6.1.1/wp-content/plugins/e-signature/assets/images/help.png" height="20px" width="20px" align="left" />
+					<span>
+					Selecting this option allows you to easily insert a custom message in signer confirmation emails.
+					</span>
+					</a>
+				<input type="checkbox"  id="confirmation_custom_message" name="confirmation_custom_message" value="1"> <label class="leftPadding-5">Add custom message to signer confirmation email</label>
+				<div id="confirmation_custom_message_text" style="display:none;padding-left:50px;"><textarea name="confirmation_custom_message_text" cols="100" rows="8" placeholder="Add a custom comment that will be inserted in the email sent to signers confirmation e-mail here....."></textarea></div>
+			</p><p id="esig_template_option">
+			<a href="#" class="tooltip">
+					<img src="http://localhost/6.1.1/wp-content/plugins/e-signature/assets/images/help.png" height="20px" width="20px" align="left" />
+					<span>
+					Selecting this option allows you to easily save this document as a template and create future documents from its contents.
+					</span>
+					</a>
+				<input type="checkbox"  id="esig_template" name="esig_template"><label class="leftPadding-5"> Save document as template</label>	<div id="esig_template_input" style="display:none;padding-left:50px;">
+				
+				<input type="text" name="esig_template_title" placeholder="Name of Template" value="" > <table class="form-table">
+	<tbody>
+		
+		<tr>
+			<td class="noPadding" width="20px"><a href="#" class="tooltip">
+
+					<img src="http://localhost/6.1.1/wp-content/plugins/e-signature/assets/images/help.png" height="20px" width="20px" align="left" />
+
+					<span>This option lets you easily give document sending permissions to all users of an entire WordPress user role.
+					</span>
+					</a></td>
+			<td class="noPadding">
+					
+					<p class="esig-chosen-drop">
+					
+					
+					<label>Select one (or multiple) ROLES that can access this template</label>
+
+						<select name="esig_roles_option_template[]" style="width:500px;" tabindex="9" data-placeholder="Choose a Option..." multiple class="esig-select2">
+
+							<option value="administrator" > administrator</option><option value="editor" > editor</option><option value="author" > author</option><option value="contributor" > contributor</option><option value="subscriber" > subscriber</option><option value="customer" > customer</option><option value="shop_manager" > shop_manager</option><option value="bookingpress-customer" > bookingpress-customer</option><option value="bookingpress-staffmember" > bookingpress-staffmember</option>
+
+							
+						</select> 	
+					</p>	
+				
+	   			
+			</td>
+		</tr>
+
+		<tr>
+			<td width="20px" class="noPadding"><a href="#" class="tooltip">
+
+					<img src="http://localhost/6.1.1/wp-content/plugins/e-signature/assets/images/help.png" height="20px" width="20px" align="left" />
+
+					<span>
+					Want to give document sending access to one single user?  This is space to turn that dream into reality!
+					</span>
+					</a></td>
+					<td class="noPadding">
+					
+					<p class="esig-chosen-drop">
+					<label>Select one (or multiple) USERS that can access this template</label>
+
+						<select name="esig_roles_user_option_template[]" style="width:500px;" tabindex="9" data-placeholder="Choose a Option..." multiple class="esig-select2">
+									  
+
+							<option value="1" > admin</option>
+
+							
+						</select> 	
+					</p>	
+				
+	   			
+			</td>
+		</tr>
+		
+		
+	</tbody>
+</table>
+
+</div></p>
+			<p id="esig_pdf_attachment">
+			<a href="#" class="tooltip">
+					<img src="http://localhost/6.1.1/wp-content/plugins/e-signature/assets/images/help.png" height="20px" width="20px" align="left" />
+					<span>
+					Selecting this option will automatically attach a PDF of this attachment to the email that gets sent to all parties once the document has been signed by all parties and is closed.
+					</span>
+					</a>
+				<input type="checkbox"  id="esig_pdf_email" data-parent="active" name="esig_pdf_attachment" value="1"><label class="leftPadding-5"> Send a PDF of this agreement as an email attachment</label>
+				
+			</p>		
+		
+			<p id="esig_signing_reminders">
+			<a href="#" class="tooltip">
+					<img src="http://localhost/6.1.1/wp-content/plugins/e-signature/assets/images/help.png" height="20px" width="20px" align="left" />
+					<span>
+					Automatically send email reminder(s) to all signers that have not yet signed your document.
+					</span>
+					</a>
+				<input type="checkbox"  id="esig_reminders" name="esig_reminders" value="1"> Enable Signing Reminders
+				<div id="esig_reminders_input" style="display:none;padding-left:50px;">
+				
+				<p>Send the first reminder to the signer  <input type="text" name="esig_reminder_for" id="esig_reminder_for" min="1"  value=""> days after the initial signing request.</p>
+				<p>Send the second reminder to the signer   <input type="text" name="esig_reminder_repeat" id="esig_reminder_repeat"  value=""> days after the initial signing request.</p>
+				<p>Send the last reminder to the signer    <input type="text" name="esig_reminder_expire" id="esig_reminder_expire" min="1"  value=""> days after the initial signing request.</p>
+				
+				</div>
+			</p>		
+		
+                <p id="esignadvanced"><a href="#">(+) Advanced eSign Settings</a></p>
+                <p id="esignadvanced-hide" style="display:none"><a href="#">(-) Hide Advanced eSign Settings</a></p>
+
+                <div id="advanced-settings">
+                    <div class="esig-edit-screen-print-pdf-section">
+                        <p>
+                        <h4>Print Document button advanced options:</h4>
+
+                        <select name="esig_print_option" data-placeholder="Choose a Option..." class="esig-select2" style="width:500px;" tabindex="9">
+                                                        <option value="1" selected>Only display 'Print Document' button when document is signed by everyone</option>
+                            <option value="2" >Hide 'Print Document' button always, no matter what.</option>
+                            <option value="3" >Display 'Print Document' button always, no matter what.</option>
+                            <option value="4" >Only Display 'Print Document' while document waiting for signature.</option>
+                        </select>
+                        </p>
+
+                        <p>
+			<h4 class="esig-pdf-heading">Save as PDF <span class="description">default settings:</span></h4>
+         
+				<select  style="width:500px;" data-placeholder="Choose a Option..." name="esig_pdf_option" class="esig-select2" tabindex="9">
+					<option value=""></option>		
+					<option value="1" selected>Only display Save as PDF button when document is signed by everyone</option>
+					
+					<option value="2" >Hide Save as PDF button always, no matter what.</option>
+								
+					<option value="3" >Display Save as PDF button always, no matter what.</option>
+						  
+				 </select>
+ 
+			</p>
+			                    </div>
+                    
+                    <p><a href="#" class="tooltip">
+                                    <img src="http://localhost/6.1.1/wp-content/plugins/e-signature/assets/images/help.png" height="20px" width="20px" align="left"><span>Enable google Recaptcha option for this document contracts.</span>
+                                    </a><input type="checkbox" id="esig_google_recaptha" name="esig_google_recaptha" value="1" >
+                                   <label class="leftPadding-5"> Enable google Recaptcha for this document</label></p>
+<p>
+    <a href="#" class="tooltip">
+        <img src="http://localhost/6.1.1/wp-content/plugins/e-signature/assets/images/help.png" height="20px" width="20px" align="left"><span> Have you ever wanted to include a non-signer on a document? Maybe a manager or possibly a supervisor. You didn’t necessarily require a legal signature from the recipient but wanted to cc them in the process so they can preview and access the contract for their own records.</span>
+    </a><input type="checkbox" id="esig_carbon_copy"  name="esig_carbon_copy" value="1">
+    <label class="leftPadding-5">+CC (Carbon copy) Recipients (when this document is successfully Signed)</label>
+</p>
+
+
+<div id="esig_carbon_copy_setting" style="display:none;margin-left:75px;">
+
+
+    <div id="esig-sad-document-cc" class="container-fluid" align="center">
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <img src="http://localhost/6.1.1/wp-content/plugins/e-signature/assets/images/logo.png" width="200px" height="45px" alt="Sign Documents using WP E-Signature" width="100%" style="text-align:center;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="esig-popup-header">Cc user information</div>
+            </div>
+        </div>
+
+        <div class="row cc_recipient_emails_container">
+            
+            <div id="cc_recipient_emails" class="col-sm-12 af-inner">
+
+                <div class="container-fluid">
+
+
+                
+
+                    <div id="recipient_emails" class="row">
+                        <div class="col-sm-5 noPadding"> <input type="text" class="form-control esig-input" name="cc_recipient_fnames[]" placeholder="CC Users Name"  value=""/></div>
+                        <div class="col-sm-5 noPadding leftPadding-5"> <input type="text" class="form-control esig-input" name="cc_recipient_emails[]" placeholder="email@address.com"  value="" /></div>
+                        <div class="col-sm-2 text-left"> <span id="esig-del-signer" class="deleteIcon"></span></div>
+                    </div>
+
+
+                                    </div>
+            </div>   
+        </div>
+        
+        <div id="error" style="display: none;"></div>
+
+        <div class="row topMargin bottomMargin">
+            <div class="col-sm-12">
+                <div class="container-fluid" style="width:80%;">
+                    <div class="row">
+                        <div class="col-sm-12 text-right">
+                            <a href="#" id="add-sad-esig-cc">+ CC</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div align="center" class="esig_nextstep">
+            <input type="submit" value="Save" class="submit button button-primary button-large" id="esig-sad-cc-save"  name="cc_saving">
+
+        </div>
+
+    </div>
+
+</div>
+
+<p><a href="#" class="tooltip">
+                                    <img src="http://localhost/6.1.1/wp-content/plugins/e-signature/assets/images/help.png" height="20px" width="20px" align="left"><span >Assign an approval signer to sign and approve this document once a signature is added</span>
+                                    </a><input type="checkbox" id="esig_assign_approval_signer" name="esig_assign_approval_signer" value="1" ><label class="leftPadding-5">Assign an approval signer to sign and approve this document once a signature is added - <a href="https://wpe.approveme.com/article/approval-signer/" class="esig-light-link">help article</a></label></p><p><a href="#" class="tooltip">
+                                    <img src="http://localhost/6.1.1/wp-content/plugins/e-signature/assets/images/help.png" height="20px" width="20px" align="left"><span>Automatically register a signer as a WordPress user when they successfully sign this agreement.</span>
+                                    </a><input type="checkbox" id="esig_auto_add_register" name="esig_auto_add_register" value="1" >
+                                   <label class="leftPadding-5"> Auto-register signer as a Wordpress User (when this document is successfully Signed)</label></p>
+		
+					       <div id="esig_auto_register_setting" style="display:none;margin-left:75px !important;">
+						
+						<div>
+								
+								
+										<div id="esig-auto-register-select">
+										<select name="esig_auto_register_role" class="esig-select2" style="width:175px">
+	<option value='bookingpress-staffmember'>BookingPress Staffmember</option>
+	<option value='bookingpress-customer'>BookingPress Customer</option>
+	<option value='shop_manager'>Shop manager</option>
+	<option value='customer'>Customer</option>
+	<option value='subscriber'>Subscriber</option>
+	<option value='contributor'>Contributor</option>
+	<option value='author'>Author</option>
+	<option value='editor'>Editor</option>
+	<option value='administrator'>Administrator</option></select>
+										</div><br>
+								<div class="leftPadding"><label><input type="checkbox" id="esig_auto_register_enable_email" name="esig_auto_register_enable_email" value="1" >Disable the email that's sent to the user that contains login details</label></div><br>
+								<div class="leftPadding"><label><input type="checkbox" id="esig_enable_admin_email" name="esig_enable_admin_email" value="1" >Disable the new user registration email that's sent to the admin</label></div><br>
+					</div>
+										<div id="esig-auto-register-error" class="esig-error" style="display:none;"></div>
+								</div>
+									
+					
+<p id="esig-hide-document-title">
+    <a href="#" class="tooltip">
+        <img src="http://localhost/6.1.1/wp-content/plugins/e-signature/assets/images/help.png" height="20px" width="20px" align="left" />
+        <span>
+        This setting is used to hide the document name. If you check this option, it will hide the document name on the document signing page and on the signed PDF.        </span>
+    </a>
+    <input type="checkbox"  id="esig-hide-document-title-checkbox" data-parent="$parent" name="esig_hide_document_title" value="1"><label class="leftPadding-5"> Hide this document name from the document signing page and signed PDF. </label>
+</p>
+
+
+                </div>
+            </div <!-- container end here -->
+        </div>
+    </div>
+    <!-- End of meta box -->
+    
+    <div id="esig_submit_section" class="esig-colum-conainer">
+        <span class="esig-left">
+            <input type="submit" value="Save as draft" class="submit button button-secondary button-large" id="submit_save" name="esig_save">
+            <input type="submit" value="Send Document" class="submit button button-primary button-large" id="submit_send"  name="send">
+        </span>
+
+        
+            <span class="esig-right" style="display:none;" id="esig-preview-document">
+                <a id="esig-preview-link" href="http://localhost/6.1.1?page_id=6&esigpreview=1&document_id=290&mode=1" target="_blank" class="submit button esig-preview button-large"> Preview Document </a>
+            </span>
+
+        
+    </div></div><div id="postbox-container-1" class="postbox-container"><div id="side-sortables" class="meta-box-sortables ui-sortable"><div id="esig-logo-box" class="postbox" align="center"><img src="http://localhost/6.1.1/wp-content/plugins/e-signature/assets/images/logo.png" width="200px" height="45px" alt="Sign Documents using WP E-Signature"></div><div id="esig-acesscontrol-box" class="postbox" ><div class="postbox-header"><h3 class='hndle ui-sortable-handle esig-section-title'><span> <a href="#" class="tooltip">
+                                                    <img src="http://localhost/6.1.1/wp-content/plugins/e-signature/assets/images/help.png" height="20px" align="left" />
+                                          <span>
+                                              The Document Portal feature lets you assign Stand Alone Documents to a specific Wordpress user role (like: editor, subscriber, etc). When you insert the shortcode [esig-doc-dashboard status="required"] on any WordPress page your users will see their required docs.
+                                          </span>
+                                    </a> Document Access Control</span></h3><button type="button" class="handlediv acesscontrol" aria-expanded="false"><span class="screen-reader-text">Toggle panel: Publish</span><span class="toggle-indicator" aria-hidden="true"></span></button></div><div class="inside acesscontrolbody"> <div style="width:250px;">
+                                        <div ><input type="checkbox" id="esig_required_wpmember" name="esig_required_wpmember" value="1" >Required a Specific Wordpress member (or) user role to sign this document.</div>
+                                      
+                             <div id="esig_wpaccess_control_role" name="esig_wpaccess_control_role" style="display:none;" > <hr>
+                                        
+                                     <div id="esig-valid-message" style="display:none;"> Oops! It looks like you haven't yet selected your user role. Please do it now, and try saving again. </div>   
+                                     
+                                            <div class="container-fluid esig-chosen-drop">  
+                                                   <div class="row">
+                                                   <div class="col-md-2 noPadding">
+                                                    <a href="#" class="tooltip">
+                                                    <img src="http://localhost/6.1.1/wp-content/plugins/e-signature/assets/images/help.png" height="10px" align="left" style="background: rgb(255, 255, 255);width:20px;height: 20px;"/>
+                                          <span>
+                                              Select one (or multiple) USERS that will need to sign this document.
+                                          </span>
+                                            </a> 
+                                            </div>
+                                            <div class="col-md-10 noPadding">
+					    <label>Select one (or multiple) USERS that will need to sign this document.</label>
+                                                </div>
+                                                </div>
+                                                <div class="row">
+                                                  <div class="col-md-12">
+                                            <select style="width:230px;" id="esig_access_roles_option" name="esig_access_roles_option[]" multiple class="esig-select2">
+                                            <option value="1" > admin</option>
+                                            </select>
+                                                    </div>
+                                                </div>
+                                            </div> <div style="margin-left:46px;" > <input id="esig_access_control_role" type="checkbox" name="esig_access_control_role[]"  value="administrator" > administrator<br><input id="esig_access_control_role" type="checkbox" name="esig_access_control_role[]"  value="editor" > editor<br><input id="esig_access_control_role" type="checkbox" name="esig_access_control_role[]"  value="author" > author<br><input id="esig_access_control_role" type="checkbox" name="esig_access_control_role[]"  value="contributor" > contributor<br><input id="esig_access_control_role" type="checkbox" name="esig_access_control_role[]"  value="subscriber" > subscriber<br><input id="esig_access_control_role" type="checkbox" name="esig_access_control_role[]"  value="customer" > customer<br><input id="esig_access_control_role" type="checkbox" name="esig_access_control_role[]"  value="shop_manager" > shop_manager<br><input id="esig_access_control_role" type="checkbox" name="esig_access_control_role[]"  value="bookingpress-customer" > bookingpress-customer<br><input id="esig_access_control_role" type="checkbox" name="esig_access_control_role[]"  value="bookingpress-staffmember" > bookingpress-staffmember<br> </div>
+                                                <br>  
+                                              <select name="esig_document_permission" >
+                                                     <option value="required" >This Document is required</option><option value="optional" >This Document is Optional</option></select><br><hr><h6><span>Document Description</span></h6><textarea  id="esig_document_description" name="esig_document_description" rows="4" cols="28" style="width:100%" maxlength="75" placeholder="Welcome to our site, so we can better serve you please sign this agreement."></textarea></br><div id="esig-char-limit">The document description will be limited to 75 chars, <span id="esig-char-count"> 75 </span> chars left</div><div id="esig-featured-image-container" class="hidden">
+                                                                   <img src="http://localhost/6.1.1/wp-content/plugins/e-signature/assets/images/noimage.jpg">
+                                                                    </div><!-- #esig-featured-image-container -->
+
+
+                                                                    <p class="hide-if-no-js" >
+                                                                       <a title="Set Footer Image" href="#" id="esig-set-image-thumbnail">Set featured image</a>
+                                                                    </p>
+
+                                                                    <p class="hide-if-no-js">
+                                                                            <a title="Remove Footer Image" href="javascript:;" id="esig-remove-image-thumbnail">Remove featured image</a><br><a href=" https://www.approveme.com/wordpress-document-portal/" class="button-secondary" target="_blank">Learn about this feature</a>
+                                                                    </p><!-- .hide-if-no-js -->
+
+
+                                                                    <p id="esig-featured-image-info">
+                                                                            <input type="hidden" id="esig-image-thumbnail-src" name="esig_image_thumbnail_src" value="http://localhost/6.1.1/wp-content/plugins/e-signature/assets/images/noimage.jpg">
+                                                                    </p></div></div></div></div> <div id="esig-esigactive-box" class="postbox" ><div class="postbox-header"><h3 class='hndle ui-sortable-handle esig-section-title'><span> <a href="#" class="tooltip">
+    <img src="http://localhost/6.1.1/wp-content/plugins/e-signature-business-add-ons/esig-active-campaign/admin/assets/images/help.png" height="20px" align="left" />
+    <span>
+        Select the email newsletter list (or tags) in ActiveCampaign you would like your signer to be automatically assigned after signing this document.
+    </span>
+</a> ActiveCampaign</span></h3><button type="button" class="handlediv esigactive" aria-expanded="false"><span class="screen-reader-text">Toggle panel: Publish</span><span class="toggle-indicator" aria-hidden="true"></span></button></div><div class="inside esigactiveinside"><div><p align="left"><img src="http://localhost/6.1.1/wp-content/plugins/e-signature-business-add-ons/esig-active-campaign/admin/assets/images/ac_logo.png" style="max-width:250px;"></p><p>You need to add your ActiveCampaign API credentials to use this feature. You can do this under the <a href="admin.php?page=esign-misc-general">Misc settings</a> tab. <br><br>Send newsletters and automate your email marketing with ActiveCampaign.</p> <p align="center" ><a href="http://www.activecampaign.com/?_r=U7521972" target="_blank" class="esig-red-btn"><span>Get a free account</span></a></p></div></div></div> <div id="esig-urlredirect-box" class="postbox" ><div class="postbox-header"><h3 class='hndle ui-sortable-handle esig-section-title'><span> <a href="#" class="tooltip">
+    <img src="http://localhost/6.1.1/wp-content/plugins/e-signature-business-add-ons/esig-url-redirect-after-signing/admin/assets/images/help.png" height="20px" align="left" />
+    <span>
+        If you would like to redirect the signer to a specific URL after succesfully signing your document, you can add the URL here.
+    </span>
+</a> Document URL Redirect</span></h3><button type="button" class="handlediv urlredirect" aria-expanded="false"><span class="screen-reader-text">Toggle panel: Publish</span><span class="toggle-indicator" aria-hidden="true"></span></button></div><div class="inside urlredirectbody"> <input type="textbox" class="require esig-url-redirect-input"  name="esig_redirect_url" value=""> 
+			   <input type="button" name="Add-submit" id="redirectForm" class="button-appme button" value="Add" /></p><input type="hidden" name="esig_url_id" value="290"><p class="tagchecklist" id="esig_url_redirect">http://www.domain.com or http://domain.com</p></div></div> 
+
+
+<div id="esig-support" class="postbox">
+
+    <h3 class="hndle esig-section-title"><span>Found a bug? Need support?</span></h3>
+    <div class="inside">
+
+        
+        <p><a href="https://www.youtube.com/embed/RWNKE1_qFwU?&autoplay=1&rel=0&theme=light&hd=1&autohide=1&showinfo=0&color=white&showinfo=0?TB_iframe=true&width=auto&height=auto" class="button-secondary thickbox">
+                Watch Getting Started Video</a></p>
+
+                    <p><a id="esig-report-bug" class="button-secondary" href="https://www.approveme.com/support/" target="_blank">Report a Bug</a></p>
+
+            <p> <a target="_blank" class="button-secondary" href="https://www.approveme.com/support/">Open a Support Ticket</a></p>
+                <p> <a target="_blank" class="button-secondary" href="https://www.approveme.com/wpesignature-suggestions/">Submit Feature Idea</a></p>
+
+        <p><b>Getting Started</b><br>
+            <a target="_blank" href="https://wpe.approveme.com/">Quick Start Guide</a><br>
+            <a target="_blank" href="https://wpe.approveme.com/faq/">Frequently Asked Questions</a>
+        </p>
+
+    </div>
+</div></div></div></div></div><div class="wrap"></form>	
+
+
+
+
+
+<div id="approval_signer_view_popup" class="esign-form-panel" style="display:none">
+
+    <div class="container-fluid approval-invitations-container" id="esig-approval-signer-setting" align="center">	
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <img src="http://localhost/6.1.1/wp-content/plugins/e-signature/assets/images/logo.png" width="200px" height="45px" alt="Sign Documents using WP E-Signature" width="100%" style="text-align:center;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="esig-popup-header">Who needs to approve this document?</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 af-inner">
+
+                <div id="recipient_approval_signer" class="container-fluid">
+
+                    
+                                        
+                    <div id="signer_main" class="row topPadding bottomPadding no-move">
+                        <div class="col-sm-5 noPadding"><input type="text" class="form-control esig-input" name="approval_signer_fname[]"  readonly="" placeholder="Signer 1(from website)" /></div>
+                        <div class="col-sm-5 noPadding leftPadding-5"><input type="text" class="form-control esig-input" name="approval_signer_emails[]" readonly="" placeholder="Signer 1(from website)"/></div>
+                        <div class="col-sm-2"> </div>
+                    </div>
+
+                                    </div> 
+
+            </div>
+        </div>
+
+                <div class="row">
+            <div class="col-sm-12">
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6 text-left"> <span id="esign-approval-signer-order" style="display: none;" >
+
+                                <div><label> <input type="checkbox" id="esign_assign_approval_signer_order" name="esign_assign_approval_signer_order" value="1"  >
+                                    Assign signer order</label></div>
+
+                            </span></div>
+                        <div class="col-sm-6 text-right topMargin bottomMargin">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-sm-4"></div>
+                                    <div class="col-sm-8 text-left"><a href="#" id="add-approval-signer">+ Add Signer</a></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <p align="center">
+            <input type="button" value="Save" class="submit button button-primary button-large" id="submit_approval_signer_save" name="signersave">
+        </p>
+
+
+
+
+    </div>
+
+</div>
+
+
+
+
+<div id="esig-auto-add-signature-popup" style="display:none;">
+
+    <div id="auto-add-esign-popup" class="container-fluid">
+
+        <form>
+
+            <div class="auto-signature-agree row">
+                <div class="col-sm-12">
+                    <center><input type="checkbox" name="esign-add-auto-agree" id="esign-add-auto-signature-agree" value="1" checked><b> I Agree (Required)</b></center>
+                </div>
+            </div>
+
+            <div class="row" style="max-width: 700px;margin-bottom: 30px;">
+                <div class="col-sm-12">
+                    I am <b>esig</b> and I understand that by clicking "Agree & Sign"                     <span class="auto-signature-strong"><b>I agree to be legally bound </b></span>by The WP E-Signature <a href="#" id="esig-terms" class="doc-terms"><b>Terms of Use</b></a>
+                            and the contents of this agreement in its completed form.                            </div>
+                            </div>
+
+            <div align="center" class="row auto-signature-pad" style="max-width: 700px;">
+                                <div class="col-sm-12">
+                                    
+
+
+                                    <div style="justify-content:center" class="signature-wrapper-displayonly-signed">
+
+                                        <span class="esig-signature-type-font1"><font size="41.5">Admin signature</font></span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row" style="position: relative;margin-top: 20px;" align="center">
+                                <div class="col-sm-12">
+                                    <a href="#" class="esig-blue-btn" id="esig-auto-add-confirm"  title="Agree and submit your signature.">Agree & Sign</a>
+                                </div>
+                            </div>
+
+                            </form>
+                            </div>
+                            </div><!-- esig-auto-add-signature-popup  -->
+
+                            <!-- terms and condition start here -->
+                            <div id="esig-terms-condition" style="display:none;">
+
+                                <p id="esign-terms-goback" style="display:none;"><a href="#" id="esign-goback">Go Back</a></p>
+
+                                <div id="esign-terms-content" style="display: none;" style="max-width: 500px;" >  <h1>Loading ........</h1></div>
+
+                                <p id="esign-terms-goback" style="display:none;"><a href="#" id="esign-goback">Go Back</a></p>
+                            </div>
+
+
+
+
+
+<div class="af-inner_edit" id="standard_view_popup_edit" style="display:none;">
+
+    <div class="container-fluid noPadding text-center invitations-container_ajax">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="container-fluid invitations-container">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="http://localhost/6.1.1/wp-content/plugins/e-signature/assets/images/logo.png" width="200px" height="45px" alt="Sign Documents using WP E-Signature" width="100%" style="text-align:center;"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="esig-popup-header">Who needs to sign this document?</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12" id="esig-signer-edit-wrapper">
+                    
+            </div>
+        </div>
+
+        <div class="row" align="center">
+            <div class="col-md-12">
+            <input type="button" value="Save Changes" class="submit button button-primary button-large" id="submit_signer_save" name="signersave">
+            </div>
+        </div>
+
+    </div>  
+
+</div>		
+
+
+
+
+
+<!--E-signature dialog content here -->	
+<div id="esig-dialog-content" style="display: none;"> </div>
+</div>
+<div class="clear"></div></div><!-- wpbody-content -->
+<div class="clear"></div></div><!-- wpbody -->
+<div class="clear"></div></div><!-- wpcontent -->
+
+<div id="wpfooter" role="contentinfo">
+		<p id="footer-left" class="alignleft">
+			</p>
+	<p id="footer-upgrade" class="alignright">
+			</p>
+	<div class="clear"></div>
+</div>
+	<div id="wp-auth-check-wrap" class="hidden">
+	<div id="wp-auth-check-bg"></div>
+	<div id="wp-auth-check">
+	<button type="button" class="wp-auth-check-close button-link"><span class="screen-reader-text">Close dialog</span></button>
+			<div id="wp-auth-check-form" class="loading" data-src="http://localhost/6.1.1/wp-login.php?interim-login=1&#038;wp_lang=en_US"></div>
+			<div class="wp-auth-fallback">
+		<p><b class="wp-auth-fallback-expired" tabindex="0">Session expired</b></p>
+		<p><a href="http://localhost/6.1.1/wp-login.php" target="_blank">Please log in again.</a>
+		The login page will open in a new tab. After logging in you can close it and return to this page.</p>
+	</div>
+	</div>
+	</div>
+	<script type="text/javascript">if(typeof(esig_sif_quicktag) != 'undefined'){
+ QTags.addButton( 'esig_1', 'Signer Field',esig_sif_quicktag, null, null, 'Add a signer input field', 309 ); 
+}</script><link rel='stylesheet' id='chosen-css' href='http://localhost/6.1.1/wp-content/plugins/e-signature/assets/js/chosen_v1.1.0/chosen.css?ver=6.1.1' media='all' />
+<link rel='stylesheet' id='thickbox-css' href='http://localhost/6.1.1/wp-includes/js/thickbox/thickbox.css?ver=6.1.1' media='all' />
+<script src='http://localhost/6.1.1/wp-admin/load-scripts.php?c=1&amp;load%5Bchunk_0%5D=hoverIntent,regenerator-runtime,wp-polyfill,wp-hooks&amp;ver=6.1.1'></script>
+<script src='http://localhost/6.1.1/wp-includes/js/dist/i18n.min.js?ver=9e794f35a71bb98672ae' id='wp-i18n-js'></script>
+<script id='wp-i18n-js-after'>
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script src='http://localhost/6.1.1/wp-admin/js/common.min.js?ver=6.1.1' id='common-js'></script>
+<script src='http://localhost/6.1.1/wp-includes/js/hoverintent-js.min.js?ver=2.2.1' id='hoverintent-js-js'></script>
+<script src='http://localhost/6.1.1/wp-includes/js/admin-bar.min.js?ver=6.1.1' id='admin-bar-js'></script>
+<script src='http://localhost/6.1.1/wp-admin/js/svg-painter.js?ver=6.1.1' id='svg-painter-js'></script>
+<script id='heartbeat-js-extra'>
+var heartbeatSettings = {"nonce":"e36ff13441"};
+</script>
+<script src='http://localhost/6.1.1/wp-includes/js/heartbeat.min.js?ver=6.1.1' id='heartbeat-js'></script>
+<script src='http://localhost/6.1.1/wp-includes/js/wp-auth-check.min.js?ver=6.1.1' id='wp-auth-check-js'></script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature/assets/js/wpesignature.js?ver=1.5.7.0' id='wpe-signature-js-script-js'></script>
+<script src='http://localhost/6.1.1/wp-includes/js/jquery/ui/mouse.min.js?ver=1.13.2' id='jquery-ui-mouse-js'></script>
+<script src='http://localhost/6.1.1/wp-includes/js/jquery/ui/resizable.min.js?ver=1.13.2' id='jquery-ui-resizable-js'></script>
+<script src='http://localhost/6.1.1/wp-includes/js/jquery/ui/draggable.min.js?ver=1.13.2' id='jquery-ui-draggable-js'></script>
+<script src='http://localhost/6.1.1/wp-includes/js/jquery/ui/controlgroup.min.js?ver=1.13.2' id='jquery-ui-controlgroup-js'></script>
+<script src='http://localhost/6.1.1/wp-includes/js/jquery/ui/checkboxradio.min.js?ver=1.13.2' id='jquery-ui-checkboxradio-js'></script>
+<script src='http://localhost/6.1.1/wp-includes/js/jquery/ui/button.min.js?ver=1.13.2' id='jquery-ui-button-js'></script>
+<script src='http://localhost/6.1.1/wp-includes/js/jquery/ui/dialog.min.js?ver=1.13.2' id='jquery-ui-dialog-js'></script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature/assets/js/jquery.validate.js?ver=1.15.0' id='e-signature-js-validation-script-js'></script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature/assets/js/esign.js?ver=1.0.1' id='e-signature-js-script-js'></script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature/assets/js/esig-validation.js?ver=1.0.1' id='e-signature-validation-script-js'></script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature/assets/js/bootstrap/bootstrap-dialog.min.js?ver=3.2.0' id='e-signature-bootstrap-dialog-js'></script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature/assets/js/chosen.jquery.js?ver=1.0.1' id='e-signature-admin-script-js'></script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature/assets/js/select2.min.js?ver=1.0.13' id='e-signature-select2-script-js'></script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature/assets/js/prism.js?ver=1.0.1' id='e-signature-admin-script1-js'></script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature/assets/js/tooltip.js?ver=6.1.1' id='esig-tooltip-jquery-js'></script>
+<script id='e-signature-admin-script2-js-extra'>
+var esigAjax = {"ajaxurl":"http:\/\/localhost\/6.1.1\/wp-admin\/admin-ajax.php","_wpnonce":"69da7b0f4c"};
+var esig_tool_tip_script = {"imgurl":"http:\/\/localhost\/6.1.1\/wp-content\/plugins\/e-signature\/assets\/images\/callout_black.gif"};
+var esigAjax = {"ajaxurl":"http:\/\/localhost\/6.1.1\/wp-admin\/admin-ajax.php","_wpnonce":"69da7b0f4c"};
+var esig_tool_tip_script = {"imgurl":"http:\/\/localhost\/6.1.1\/wp-content\/plugins\/e-signature\/assets\/images\/callout_black.gif"};
+var esigAjax = {"ajaxurl":"http:\/\/localhost\/6.1.1\/wp-admin\/admin-ajax.php","_wpnonce":"69da7b0f4c"};
+var esig_tool_tip_script = {"imgurl":"http:\/\/localhost\/6.1.1\/wp-content\/plugins\/e-signature\/assets\/images\/callout_black.gif"};
+</script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature/assets/js/form.style.js?ver=1.0.1' id='e-signature-admin-script2-js'></script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature/assets/js/common_admin.js?ver=1.0.1' id='e-signature-common-script2-js'></script>
+<script src='http://localhost/6.1.1/wp-content/plugins/gravityforms/assets/js/dist/scripts-admin.min.js?ver=0cf4563a2389be2f70a16014b3337e75' id='gform_gravityforms_admin-js'></script>
+<script src='http://localhost/6.1.1/wp-content/plugins/gravity-signature-forms-add-on/admin/assets/js/esig-add-gravity.js?ver=1.0.0' id='esig-gf-admin-script-js'></script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature/add-ons/esig-cc-users/assets/js/esig-cc.js?ver=1.5.9' id='esig-cc-users-js'></script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature/add-ons/esig-document-activity-notifications/admin/assets/js/esig-dan.js?ver=1.7.8' id='esig-dan-admin-script-js'></script>
+<script id='esig-sif-admin-script-js-extra'>
+var mysifAjax = {"ajaxurl":"http:\/\/localhost\/6.1.1\/wp-admin\/admin-ajax.php","document_id":"290","sif_signer":null,"invite_count":"0"};
+</script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature/add-ons/esig-signer-input-fields/admin/assets/js/admin_input.js?ver=1.5.9' id='esig-sif-admin-script-js'></script>
+<script id='esig-slv-admin-script-js-extra'>
+var esig_slv = {"active":"yes"};
+</script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature/add-ons/second-layer-vefication/assets/js/esig-slv-admin.js?ver=1.0.0' id='esig-slv-admin-script-js'></script>
+<script id='esig_active_campaign-js-extra'>
+var active_campaign_script = {"ajaxurl":"http:\/\/localhost\/6.1.1\/wp-admin\/admin-ajax.php?action=esigactivecampaign"};
+</script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature-business-add-ons/esig-active-campaign/admin/assets/js/active_campaign.js?ver=1.0.1' id='esig_active_campaign-js'></script>
+<script id='esig_active_campaign1-js-extra'>
+var esig_active_campaign_ajax_script = {"ajaxurl":"http:\/\/localhost\/6.1.1\/wp-admin\/admin-ajax.php?action=esigactivecampaigntagdelete"};
+</script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature-business-add-ons/esig-active-campaign/admin/assets/js/active_campaign_other.js?ver=1.0.1' id='esig_active_campaign1-js'></script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature-business-add-ons/esig-add-custom-message/admin/assets/js/esig-add-custom-message.js?ver=1.7.8' id='esig-custom-message-admin-script-js'></script>
+<script id='esig-admin-script-js-extra'>
+var esigtemplateAjax = {"ajaxurl":"http:\/\/localhost\/6.1.1\/wp-admin\/admin-ajax.php","esig_template_preview":"","esig_add_template":""};
+</script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature-business-add-ons/esig-add-templates/admin/assets/js/esig-add-template.js?ver=1.7.8' id='esig-admin-script-js'></script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature-business-add-ons/esig-assign-signer-order/admin/assets/js/esig-assign-signer-order.js?ver=1.7.8' id='esig-order-admin-script-js'></script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature-business-add-ons/esig-assign-signer-order/admin/assets/js/esig-assign-signer-order-popup.js?ver=1.7.8' id='esig-order-popup-script-js'></script>
+<script id='-plugin-script-js-extra'>
+var esig_attachment = {"folder_url":"http:\/\/localhost\/6.1.1\/wp-content\/plugins\/e-signature-business-add-ons\/esig-attach-pdf-to-email\/includes\/views\/"};
+</script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature-business-add-ons/esig-attach-pdf-to-email/includes/assets/js/esig-pdf-attachment.js?ver=1.0.1' id='-plugin-script-js'></script>
+<script id='esig_auto_add_signature-admin-script-js-extra'>
+var esigAutoadd = {"fileURL":"http:\/\/localhost\/6.1.1\/wp-content\/plugins\/e-signature-business-add-ons\/esig-auto-add-my-signature\/admin\/assets\/views\/auto_add_sign.php"};
+</script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature-business-add-ons/esig-auto-add-my-signature/admin/assets/js/esig-auto-add-signature.js?ver=1.7.8' id='esig_auto_add_signature-admin-script-js'></script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature-business-add-ons/esig-auto-register-user/admin/assets/js/esig-auto-add-register.js?ver=1.7.8' id='esig-aur-admin-script-js'></script>
+<script id='esig-ds-plugin-script-js-extra'>
+var esig_dropbox = {"folder_url":"http:\/\/localhost\/6.1.1\/wp-content\/plugins\/e-signature-business-add-ons\/esig-dropbox-sync\/admin\/views\/"};
+</script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature-business-add-ons/esig-dropbox-sync/admin/assets/js/esig-dropbox.js?ver=1.0.1' id='esig-ds-plugin-script-js'></script>
+<script id='esig-reminders-admin-script-js-extra'>
+var reminderAjax = {"ajaxurl":"http:\/\/localhost\/6.1.1\/wp-admin\/admin-ajax.php"};
+</script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature-business-add-ons/esig-signing-reminders/admin/assets/js/esig-reminders.js?ver=1.0.0' id='esig-reminders-admin-script-js'></script>
+<script id='thickbox-js-extra'>
+var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close","noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.","loadingAnimation":"http:\/\/localhost\/6.1.1\/wp-includes\/js\/thickbox\/loadingAnimation.gif"};
+</script>
+<script src='http://localhost/6.1.1/wp-includes/js/thickbox/thickbox.js?ver=3.1-20121105' id='thickbox-js'></script>
+<script id='esig-sad-admin-script-js-extra'>
+var myAjax = {"ajaxurl":"http:\/\/localhost\/6.1.1\/wp-admin\/admin-ajax.php"};
+var sadmyAjax = {"ajaxurl":"http:\/\/localhost\/6.1.1\/wp-admin\/admin-ajax.php","doc_preview_id":""};
+</script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature-business-add-ons/esig-stand-alone-docs/admin/assets/js/admin.js?ver=1.2.9' id='esig-sad-admin-script-js'></script>
+<script id='esig_url_redirect-js-extra'>
+var ajax_script = {"ajaxurl":"http:\/\/localhost\/6.1.1\/wp-admin\/admin-ajax.php?action=redirectForm"};
+</script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature-business-add-ons/esig-url-redirect-after-signing/admin/assets/js/redirect.js?ver=1.0.1' id='esig_url_redirect-js'></script>
+<script id='esig_url_redirect1-js-extra'>
+var esig_url_ajax_script = {"ajaxurl":"http:\/\/localhost\/6.1.1\/wp-admin\/admin-ajax.php?action=redirecturlForm","urlid":"291"};
+</script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature-business-add-ons/esig-url-redirect-after-signing/admin/assets/js/redirect_other.js?ver=1.0.1' id='esig_url_redirect1-js'></script>
+<script src='http://localhost/6.1.1/wp-includes/js/underscore.min.js?ver=1.13.4' id='underscore-js'></script>
+<script src='http://localhost/6.1.1/wp-includes/js/shortcode.min.js?ver=6.1.1' id='shortcode-js'></script>
+<script src='http://localhost/6.1.1/wp-includes/js/backbone.min.js?ver=1.4.1' id='backbone-js'></script>
+<script id='wp-util-js-extra'>
+var _wpUtilSettings = {"ajax":{"url":"\/6.1.1\/wp-admin\/admin-ajax.php"}};
+</script>
+<script src='http://localhost/6.1.1/wp-includes/js/wp-util.min.js?ver=6.1.1' id='wp-util-js'></script>
+<script src='http://localhost/6.1.1/wp-includes/js/wp-backbone.min.js?ver=6.1.1' id='wp-backbone-js'></script>
+<script id='media-models-js-extra'>
+var _wpMediaModelsL10n = {"settings":{"ajaxurl":"\/6.1.1\/wp-admin\/admin-ajax.php","post":{"id":0}}};
+</script>
+<script src='http://localhost/6.1.1/wp-includes/js/media-models.min.js?ver=6.1.1' id='media-models-js'></script>
+<script id='wp-plupload-js-extra'>
+var pluploadL10n = {"queue_limit_exceeded":"You have attempted to queue too many files.","file_exceeds_size_limit":"%s exceeds the maximum upload size for this site.","zero_byte_file":"This file is empty. Please try another.","invalid_filetype":"Sorry, you are not allowed to upload this file type.","not_an_image":"This file is not an image. Please try another.","image_memory_exceeded":"Memory exceeded. Please try another smaller file.","image_dimensions_exceeded":"This is larger than the maximum size. Please try another.","default_error":"An error occurred in the upload. Please try again later.","missing_upload_url":"There was a configuration error. Please contact the server administrator.","upload_limit_exceeded":"You may only upload 1 file.","http_error":"Unexpected response from the server. The file may have been uploaded successfully. Check in the Media Library or reload the page.","http_error_image":"The server cannot process the image. This can happen if the server is busy or does not have enough resources to complete the task. Uploading a smaller image may help. Suggested maximum size is 2560 pixels.","upload_failed":"Upload failed.","big_upload_failed":"Please try uploading this file with the %1$sbrowser uploader%2$s.","big_upload_queued":"%s exceeds the maximum upload size for the multi-file uploader when used in your browser.","io_error":"IO error.","security_error":"Security error.","file_cancelled":"File canceled.","upload_stopped":"Upload stopped.","dismiss":"Dismiss","crunching":"Crunching\u2026","deleted":"moved to the Trash.","error_uploading":"\u201c%s\u201d has failed to upload.","unsupported_image":"This image cannot be displayed in a web browser. For best results convert it to JPEG before uploading.","noneditable_image":"This image cannot be processed by the web server. Convert it to JPEG or PNG before uploading.","file_url_copied":"The file URL has been copied to your clipboard"};
+var _wpPluploadSettings = {"defaults":{"file_data_name":"async-upload","url":"\/6.1.1\/wp-admin\/async-upload.php","filters":{"max_file_size":"41943040b","mime_types":[{"extensions":"jpg,jpeg,jpe,gif,png,bmp,tiff,tif,webp,ico,heic,asf,asx,wmv,wmx,wm,avi,divx,flv,mov,qt,mpeg,mpg,mpe,mp4,m4v,ogv,webm,mkv,3gp,3gpp,3g2,3gp2,txt,asc,c,cc,h,srt,csv,tsv,ics,rtx,css,htm,html,vtt,dfxp,mp3,m4a,m4b,aac,ra,ram,wav,ogg,oga,flac,mid,midi,wma,wax,mka,rtf,js,pdf,class,tar,zip,gz,gzip,rar,7z,psd,xcf,doc,pot,pps,ppt,wri,xla,xls,xlt,xlw,mdb,mpp,docx,docm,dotx,dotm,xlsx,xlsm,xlsb,xltx,xltm,xlam,pptx,pptm,ppsx,ppsm,potx,potm,ppam,sldx,sldm,onetoc,onetoc2,onetmp,onepkg,oxps,xps,odt,odp,ods,odg,odc,odb,odf,wp,wpd,key,numbers,pages"}]},"heic_upload_error":true,"multipart_params":{"action":"upload-attachment","_wpnonce":"007ec0fe12"}},"browser":{"mobile":false,"supported":true},"limitExceeded":false};
+</script>
+<script src='http://localhost/6.1.1/wp-includes/js/plupload/wp-plupload.min.js?ver=6.1.1' id='wp-plupload-js'></script>
+<script src='http://localhost/6.1.1/wp-includes/js/jquery/ui/sortable.min.js?ver=1.13.2' id='jquery-ui-sortable-js'></script>
+<script id='mediaelement-core-js-before'>
+var mejsL10n = {"language":"en","strings":{"mejs.download-file":"Download File","mejs.install-flash":"You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https:\/\/get.adobe.com\/flashplayer\/","mejs.fullscreen":"Fullscreen","mejs.play":"Play","mejs.pause":"Pause","mejs.time-slider":"Time Slider","mejs.time-help-text":"Use Left\/Right Arrow keys to advance one second, Up\/Down arrows to advance ten seconds.","mejs.live-broadcast":"Live Broadcast","mejs.volume-help-text":"Use Up\/Down Arrow keys to increase or decrease volume.","mejs.unmute":"Unmute","mejs.mute":"Mute","mejs.volume-slider":"Volume Slider","mejs.video-player":"Video Player","mejs.audio-player":"Audio Player","mejs.captions-subtitles":"Captions\/Subtitles","mejs.captions-chapters":"Chapters","mejs.none":"None","mejs.afrikaans":"Afrikaans","mejs.albanian":"Albanian","mejs.arabic":"Arabic","mejs.belarusian":"Belarusian","mejs.bulgarian":"Bulgarian","mejs.catalan":"Catalan","mejs.chinese":"Chinese","mejs.chinese-simplified":"Chinese (Simplified)","mejs.chinese-traditional":"Chinese (Traditional)","mejs.croatian":"Croatian","mejs.czech":"Czech","mejs.danish":"Danish","mejs.dutch":"Dutch","mejs.english":"English","mejs.estonian":"Estonian","mejs.filipino":"Filipino","mejs.finnish":"Finnish","mejs.french":"French","mejs.galician":"Galician","mejs.german":"German","mejs.greek":"Greek","mejs.haitian-creole":"Haitian Creole","mejs.hebrew":"Hebrew","mejs.hindi":"Hindi","mejs.hungarian":"Hungarian","mejs.icelandic":"Icelandic","mejs.indonesian":"Indonesian","mejs.irish":"Irish","mejs.italian":"Italian","mejs.japanese":"Japanese","mejs.korean":"Korean","mejs.latvian":"Latvian","mejs.lithuanian":"Lithuanian","mejs.macedonian":"Macedonian","mejs.malay":"Malay","mejs.maltese":"Maltese","mejs.norwegian":"Norwegian","mejs.persian":"Persian","mejs.polish":"Polish","mejs.portuguese":"Portuguese","mejs.romanian":"Romanian","mejs.russian":"Russian","mejs.serbian":"Serbian","mejs.slovak":"Slovak","mejs.slovenian":"Slovenian","mejs.spanish":"Spanish","mejs.swahili":"Swahili","mejs.swedish":"Swedish","mejs.tagalog":"Tagalog","mejs.thai":"Thai","mejs.turkish":"Turkish","mejs.ukrainian":"Ukrainian","mejs.vietnamese":"Vietnamese","mejs.welsh":"Welsh","mejs.yiddish":"Yiddish"}};
+</script>
+<script src='http://localhost/6.1.1/wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=4.2.17' id='mediaelement-core-js'></script>
+<script src='http://localhost/6.1.1/wp-includes/js/mediaelement/mediaelement-migrate.min.js?ver=6.1.1' id='mediaelement-migrate-js'></script>
+<script id='mediaelement-js-extra'>
+var _wpmejsSettings = {"pluginPath":"\/6.1.1\/wp-includes\/js\/mediaelement\/","classPrefix":"mejs-","stretching":"responsive"};
+</script>
+<script src='http://localhost/6.1.1/wp-includes/js/mediaelement/wp-mediaelement.min.js?ver=6.1.1' id='wp-mediaelement-js'></script>
+<script id='wp-api-request-js-extra'>
+var wpApiSettings = {"root":"http:\/\/localhost\/6.1.1\/index.php\/wp-json\/","nonce":"7f44886611","versionString":"wp\/v2\/"};
+</script>
+<script src='http://localhost/6.1.1/wp-includes/js/api-request.min.js?ver=6.1.1' id='wp-api-request-js'></script>
+<script src='http://localhost/6.1.1/wp-includes/js/dist/dom-ready.min.js?ver=392bdd43726760d1f3ca' id='wp-dom-ready-js'></script>
+<script src='http://localhost/6.1.1/wp-includes/js/dist/a11y.min.js?ver=ecce20f002eda4c19664' id='wp-a11y-js'></script>
+<script src='http://localhost/6.1.1/wp-includes/js/clipboard.min.js?ver=2.0.11' id='clipboard-js'></script>
+<script id='media-views-js-extra'>
+var _wpMediaViewsL10n = {"mediaFrameDefaultTitle":"Media","url":"URL","addMedia":"Add media","search":"Search","select":"Select","cancel":"Cancel","update":"Update","replace":"Replace","remove":"Remove","back":"Back","selected":"%d selected","dragInfo":"Drag and drop to reorder media files.","uploadFilesTitle":"Upload files","uploadImagesTitle":"Upload images","mediaLibraryTitle":"Media Library","insertMediaTitle":"Add media","createNewGallery":"Create a new gallery","createNewPlaylist":"Create a new playlist","createNewVideoPlaylist":"Create a new video playlist","returnToLibrary":"\u2190 Go to library","allMediaItems":"All media items","allDates":"All dates","noItemsFound":"No items found.","insertIntoPost":"Insert into post","unattached":"Unattached","mine":"Mine","trash":"Trash","uploadedToThisPost":"Uploaded to this post","warnDelete":"You are about to permanently delete this item from your site.\nThis action cannot be undone.\n 'Cancel' to stop, 'OK' to delete.","warnBulkDelete":"You are about to permanently delete these items from your site.\nThis action cannot be undone.\n 'Cancel' to stop, 'OK' to delete.","warnBulkTrash":"You are about to trash these items.\n  'Cancel' to stop, 'OK' to delete.","bulkSelect":"Bulk select","trashSelected":"Move to Trash","restoreSelected":"Restore from Trash","deletePermanently":"Delete permanently","errorDeleting":"Error in deleting the attachment.","apply":"Apply","filterByDate":"Filter by date","filterByType":"Filter by type","searchLabel":"Search","searchMediaLabel":"Search media","searchMediaPlaceholder":"Search media items...","mediaFound":"Number of media items found: %d","noMedia":"No media items found.","noMediaTryNewSearch":"No media items found. Try a different search.","attachmentDetails":"Attachment details","insertFromUrlTitle":"Insert from URL","setFeaturedImageTitle":"Featured image","setFeaturedImage":"Set featured image","createGalleryTitle":"Create gallery","editGalleryTitle":"Edit gallery","cancelGalleryTitle":"\u2190 Cancel gallery","insertGallery":"Insert gallery","updateGallery":"Update gallery","addToGallery":"Add to gallery","addToGalleryTitle":"Add to gallery","reverseOrder":"Reverse order","imageDetailsTitle":"Image details","imageReplaceTitle":"Replace image","imageDetailsCancel":"Cancel edit","editImage":"Edit image","chooseImage":"Choose image","selectAndCrop":"Select and crop","skipCropping":"Skip cropping","cropImage":"Crop image","cropYourImage":"Crop your image","cropping":"Cropping\u2026","suggestedDimensions":"Suggested image dimensions: %1$s by %2$s pixels.","cropError":"There has been an error cropping your image.","audioDetailsTitle":"Audio details","audioReplaceTitle":"Replace audio","audioAddSourceTitle":"Add audio source","audioDetailsCancel":"Cancel edit","videoDetailsTitle":"Video details","videoReplaceTitle":"Replace video","videoAddSourceTitle":"Add video source","videoDetailsCancel":"Cancel edit","videoSelectPosterImageTitle":"Select poster image","videoAddTrackTitle":"Add subtitles","playlistDragInfo":"Drag and drop to reorder tracks.","createPlaylistTitle":"Create audio playlist","editPlaylistTitle":"Edit audio playlist","cancelPlaylistTitle":"\u2190 Cancel audio playlist","insertPlaylist":"Insert audio playlist","updatePlaylist":"Update audio playlist","addToPlaylist":"Add to audio playlist","addToPlaylistTitle":"Add to Audio Playlist","videoPlaylistDragInfo":"Drag and drop to reorder videos.","createVideoPlaylistTitle":"Create video playlist","editVideoPlaylistTitle":"Edit video playlist","cancelVideoPlaylistTitle":"\u2190 Cancel video playlist","insertVideoPlaylist":"Insert video playlist","updateVideoPlaylist":"Update video playlist","addToVideoPlaylist":"Add to video playlist","addToVideoPlaylistTitle":"Add to video Playlist","filterAttachments":"Filter media","attachmentsList":"Media list","settings":{"tabs":[],"tabUrl":"http:\/\/localhost\/6.1.1\/wp-admin\/media-upload.php?chromeless=1","mimeTypes":{"image":"Images","audio":"Audio","video":"Video","application\/msword,application\/vnd.openxmlformats-officedocument.wordprocessingml.document,application\/vnd.ms-word.document.macroEnabled.12,application\/vnd.ms-word.template.macroEnabled.12,application\/vnd.oasis.opendocument.text,application\/vnd.apple.pages,application\/pdf,application\/vnd.ms-xpsdocument,application\/oxps,application\/rtf,application\/wordperfect,application\/octet-stream":"Documents","application\/vnd.apple.numbers,application\/vnd.oasis.opendocument.spreadsheet,application\/vnd.ms-excel,application\/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application\/vnd.ms-excel.sheet.macroEnabled.12,application\/vnd.ms-excel.sheet.binary.macroEnabled.12":"Spreadsheets","application\/x-gzip,application\/rar,application\/x-tar,application\/zip,application\/x-7z-compressed":"Archives"},"captions":true,"nonce":{"sendToEditor":"8b57c3c2bd"},"post":{"id":0},"defaultProps":{"link":"none","align":"","size":""},"attachmentCounts":{"audio":1,"video":1},"oEmbedProxyUrl":"http:\/\/localhost\/6.1.1\/index.php\/wp-json\/oembed\/1.0\/proxy","embedExts":["mp3","ogg","flac","m4a","wav","mp4","m4v","webm","ogv","flv"],"embedMimes":{"mp3":"audio\/mpeg","ogg":"audio\/ogg","flac":"audio\/flac","m4a":"audio\/mpeg","wav":"audio\/wav","mp4":"video\/mp4","m4v":"video\/mp4","webm":"video\/webm","ogv":"video\/ogg","flv":"video\/x-flv"},"contentWidth":null,"months":[{"year":"2023","month":"2","text":"February 2023"},{"year":"2023","month":"1","text":"January 2023"}],"mediaTrash":0,"infiniteScrolling":0}};
+</script>
+<script src='http://localhost/6.1.1/wp-includes/js/media-views.min.js?ver=6.1.1' id='media-views-js'></script>
+<script src='http://localhost/6.1.1/wp-includes/js/media-editor.min.js?ver=6.1.1' id='media-editor-js'></script>
+<script src='http://localhost/6.1.1/wp-includes/js/media-audiovideo.min.js?ver=6.1.1' id='media-audiovideo-js'></script>
+<script id='mce-view-js-extra'>
+var mceViewL10n = {"shortcodes":["wp_caption","caption","gallery","playlist","audio","video","embed","bookingpress_form","bookingpress_company_avatar","bookingpress_company_name","bookingpress_company_website","bookingpress_company_address","bookingpress_company_phone","bookingpress_appointment_service","bookingpress_appointment_datetime","bookingpress_appointment_customername","bookingpress_my_appointments","bookingpress_delete_account","booking_id","bookingpress_appointment_calendar_integration","bookingpress_retry_payment","bookingpress_complete_payment","wp_e_signature","esig-email-list","esig-page-break","esiggravity","esigtextfield","esigtextarea","esigtodaydate","esigdatepicker","esigradio","esigcheckbox","esigdropdown","esigfile","esigget","esiguserdata","esigtemptextfield","esigtemptextarea","esigtempdatepicker","esigtempradio","esigtempcheckbox","esigtempdropdown","esigtempfile","esigtemptodaydate","wp_e_signature_sad","gravityform","gravityforms"]};
+</script>
+<script src='http://localhost/6.1.1/wp-includes/js/mce-view.min.js?ver=6.1.1' id='mce-view-js'></script>
+<script src='http://localhost/6.1.1/wp-includes/js/imgareaselect/jquery.imgareaselect.min.js?ver=6.1.1' id='imgareaselect-js'></script>
+<script src='http://localhost/6.1.1/wp-admin/js/image-edit.min.js?ver=6.1.1' id='image-edit-js'></script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature/add-ons/esig-access-control/assets/js/esig-access-control.js?ver=1.5.9' id='esig-access-control-admin-script-js'></script>
+<script id='document-js-js-extra'>
+var documentAjax = {"ajaxurl":"http:\/\/localhost\/6.1.1\/wp-admin\/admin-ajax.php?action=addRecipient"};
+</script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature/assets/js/document.js?ver=6.1.1' id='document-js-js'></script>
+<script id='auto-save-js-js-extra'>
+var autosaveAjax = {"ajaxurl":"http:\/\/localhost\/6.1.1\/wp-admin\/admin-ajax.php","doc_type":"","autosave_interval":"60","previewUrl":"http:\/\/localhost\/6.1.1\/index.php\/e-signature-document\/?wpesig=eyJlc2lncHJldmlldyI6MSwibW9kZSI6MX0"};
+</script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature/assets/js/auto-save.js?ver=6.1.1' id='auto-save-js-js'></script>
+<script src='http://localhost/6.1.1/wp-content/plugins/e-signature/assets/js/chosen_v1.1.0/chosen.jquery.min.js?ver=6.1.1' id='chosen-js'></script>
+<script src='http://localhost/6.1.1/wp-admin/js/editor.min.js?ver=6.1.1' id='editor-js'></script>
+<script id='editor-js-after'>
+window.wp.oldEditor = window.wp.editor;
+</script>
+<script id='quicktags-js-extra'>
+var quicktagsL10n = {"closeAllOpenTags":"Close all open tags","closeTags":"close tags","enterURL":"Enter the URL","enterImageURL":"Enter the URL of the image","enterImageDescription":"Enter a description of the image","textdirection":"text direction","toggleTextdirection":"Toggle Editor Text Direction","dfw":"Distraction-free writing mode","strong":"Bold","strongClose":"Close bold tag","em":"Italic","emClose":"Close italic tag","link":"Insert link","blockquote":"Blockquote","blockquoteClose":"Close blockquote tag","del":"Deleted text (strikethrough)","delClose":"Close deleted text tag","ins":"Inserted text","insClose":"Close inserted text tag","image":"Insert image","ul":"Bulleted list","ulClose":"Close bulleted list tag","ol":"Numbered list","olClose":"Close numbered list tag","li":"List item","liClose":"Close list item tag","code":"Code","codeClose":"Close code tag","more":"Insert Read More tag"};
+</script>
+<script src='http://localhost/6.1.1/wp-includes/js/quicktags.min.js?ver=6.1.1' id='quicktags-js'></script>
+<script id='wplink-js-extra'>
+var wpLinkL10n = {"title":"Insert\/edit link","update":"Update","save":"Add Link","noTitle":"(no title)","noMatchesFound":"No results found.","linkSelected":"Link selected.","linkInserted":"Link inserted.","minInputLength":"3"};
+</script>
+<script src='http://localhost/6.1.1/wp-includes/js/wplink.min.js?ver=6.1.1' id='wplink-js'></script>
+<script src='http://localhost/6.1.1/wp-includes/js/jquery/ui/menu.min.js?ver=1.13.2' id='jquery-ui-menu-js'></script>
+<script id='jquery-ui-autocomplete-js-extra'>
+var uiAutocompleteL10n = {"noResults":"No results found.","oneResult":"1 result found. Use up and down arrow keys to navigate.","manyResults":"%d results found. Use up and down arrow keys to navigate.","itemSelected":"Item selected."};
+</script>
+<script src='http://localhost/6.1.1/wp-includes/js/jquery/ui/autocomplete.min.js?ver=1.13.2' id='jquery-ui-autocomplete-js'></script>
+<script src='http://localhost/6.1.1/wp-admin/js/media-upload.min.js?ver=6.1.1' id='media-upload-js'></script>
+<script src='http://localhost/6.1.1/wp-includes/js/wp-embed.min.js?ver=6.1.1' id='wp-embed-js'></script>
+
+		<script type="text/javascript">
+		tinyMCEPreInit = {
+			baseURL: "http://localhost/6.1.1/wp-includes/js/tinymce",
+			suffix: ".min",
+						mceInit: {'document_content':{theme:"modern",skin:"lightgray",language:"en",formats:{alignleft: [{selector: "p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li", styles: {textAlign:"left"}},{selector: "img,table,dl.wp-caption", classes: "alignleft"}],aligncenter: [{selector: "p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li", styles: {textAlign:"center"}},{selector: "img,table,dl.wp-caption", classes: "aligncenter"}],alignright: [{selector: "p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li", styles: {textAlign:"right"}},{selector: "img,table,dl.wp-caption", classes: "alignright"}],strikethrough: {inline: "del"}},relative_urls:false,remove_script_host:false,convert_urls:false,browser_spellcheck:true,fix_list_elements:true,entities:"38,amp,60,lt,62,gt",entity_encoding:"raw",keep_styles:false,cache_suffix:"wp-mce-49110-20201110",resize:false,menubar:false,branding:false,preview_styles:"font-family font-size font-weight font-style text-decoration text-transform",end_container_on_empty_block:true,wpeditimage_html5_captions:true,wp_lang_attr:"en-US",wp_keep_scroll_position:false,wp_shortcut_labels:{"Heading 1":"access1","Heading 2":"access2","Heading 3":"access3","Heading 4":"access4","Heading 5":"access5","Heading 6":"access6","Paragraph":"access7","Blockquote":"accessQ","Underline":"metaU","Strikethrough":"accessD","Bold":"metaB","Italic":"metaI","Code":"accessX","Align center":"accessC","Align right":"accessR","Align left":"accessL","Justify":"accessJ","Cut":"metaX","Copy":"metaC","Paste":"metaV","Select all":"metaA","Undo":"metaZ","Redo":"metaY","Bullet list":"accessU","Numbered list":"accessO","Insert\/edit image":"accessM","Insert\/edit link":"metaK","Remove link":"accessS","Toolbar Toggle":"accessZ","Insert Read More tag":"accessT","Insert Page Break tag":"accessP","Distraction-free writing mode":"accessW","Add Media":"accessM","Keyboard Shortcuts":"accessH"},content_css:"http://localhost/6.1.1/wp-includes/css/dashicons.min.css?ver=6.1.1,http://localhost/6.1.1/wp-includes/js/tinymce/skins/wordpress/wp-content.css?ver=6.1.1,http://localhost/6.1.1/wp-content/plugins/gravityforms/css/shortcode-ui-editor-styles.min.css,http://localhost/6.1.1/wp-content/plugins/gravityforms/legacy/css/formsmain.min.css",plugins:"charmap,colorpicker,hr,lists,media,paste,tabfocus,textcolor,fullscreen,wordpress,wpautoresize,wpeditimage,wpemoji,wpgallery,wplink,wpdialogs,wptextpattern,wpview",external_plugins:{"esig_sif":"http:\/\/localhost\/6.1.1\/wp-content\/plugins\/e-signature\/add-ons\/esig-signer-input-fields\/admin\/assets\/js\/mce.js"},selector:"#document_content",wpautop:false,indent:true,toolbar1:"formatselect,bold,italic,bullist,numlist,blockquote,alignleft,aligncenter,alignright,link,wp_more,spellchecker,fullscreen,wp_adv,esig_sif,esig_sif2",toolbar2:"strikethrough,hr,forecolor,pastetext,removeformat,charmap,outdent,indent,undo,redo,wp_help",toolbar3:"",toolbar4:"",tabfocus_elements:":prev,:next",body_class:"document_content locale-en-us",wp_autoresize_on:true,add_unload_trigger:false,setup:function(ed){
+                    ed.on('change input', function(){ esig_setup_tinymce_content() });
+            }}},
+			qtInit: {'document_content':{id:"document_content",buttons:"strong,em,link,block,del,ins,img,ul,ol,li,code,more,close"}},
+			ref: {plugins:"charmap,colorpicker,hr,lists,media,paste,tabfocus,textcolor,fullscreen,wordpress,wpautoresize,wpeditimage,wpemoji,wpgallery,wplink,wpdialogs,wptextpattern,wpview",theme:"modern",language:"en"},
+			load_ext: function(url,lang){var sl=tinymce.ScriptLoader;sl.markDone(url+'/langs/'+lang+'.js');sl.markDone(url+'/langs/'+lang+'_dlg.js');}
+		};
+		</script>
+		<script src='http://localhost/6.1.1/wp-includes/js/tinymce/wp-tinymce.js?ver=49110-20201110' id='wp-tinymce-js'></script>
+<script type='text/javascript'>
+tinymce.addI18n( 'en', {"Ok":"OK","Bullet list":"Bulleted list","Insert\/Edit code sample":"Insert\/edit code sample","Url":"URL","Spellcheck":"Check Spelling","Row properties":"Table row properties","Cell properties":"Table cell properties","Cols":"Columns","Paste row before":"Paste table row before","Paste row after":"Paste table row after","Cut row":"Cut table row","Copy row":"Copy table row","Merge cells":"Merge table cells","Split cell":"Split table cell","Paste is now in plain text mode. Contents will now be pasted as plain text until you toggle this option off.":"Paste is now in plain text mode. Contents will now be pasted as plain text until you toggle this option off.\n\nIf you are looking to paste rich content from Microsoft Word, try turning this option off. The editor will clean up text pasted from Word automatically.","Rich Text Area. Press ALT-F9 for menu. Press ALT-F10 for toolbar. Press ALT-0 for help":"Rich Text Area. Press Alt-Shift-H for help.","You have unsaved changes are you sure you want to navigate away?":"The changes you made will be lost if you navigate away from this page.","Your browser doesn't support direct access to the clipboard. Please use the Ctrl+X\/C\/V keyboard shortcuts instead.":"Your browser does not support direct access to the clipboard. Please use keyboard shortcuts or your browser\u2019s edit menu instead.","Edit|button":"Edit"});
+tinymce.ScriptLoader.markDone( 'http://localhost/6.1.1/wp-includes/js/tinymce/langs/en.js' );
+</script>
+<script type='text/javascript' src='http://localhost/6.1.1/wp-includes/js/tinymce/langs/wp-langs-en.js?ver=49110-20201110'></script>
+		<script type="text/javascript">
+		tinyMCEPreInit.load_ext("http://localhost/6.1.1/wp-content/plugins/e-signature/add-ons/esig-signer-input-fields/admin/assets/js", "en");
+
+
+		( function() {
+			var initialized = [];
+			var initialize  = function() {
+				var init, id, inPostbox, $wrap;
+				var readyState = document.readyState;
+
+				if ( readyState !== 'complete' && readyState !== 'interactive' ) {
+					return;
+				}
+
+				for ( id in tinyMCEPreInit.mceInit ) {
+					if ( initialized.indexOf( id ) > -1 ) {
+						continue;
+					}
+
+					init      = tinyMCEPreInit.mceInit[id];
+					$wrap     = tinymce.$( '#wp-' + id + '-wrap' );
+					inPostbox = $wrap.parents( '.postbox' ).length > 0;
+
+					if (
+						! init.wp_skip_init &&
+						( $wrap.hasClass( 'tmce-active' ) || ! tinyMCEPreInit.qtInit.hasOwnProperty( id ) ) &&
+						( readyState === 'complete' || ( ! inPostbox && readyState === 'interactive' ) )
+					) {
+						tinymce.init( init );
+						initialized.push( id );
+
+						if ( ! window.wpActiveEditor ) {
+							window.wpActiveEditor = id;
+						}
+					}
+				}
+			}
+
+			if ( typeof tinymce !== 'undefined' ) {
+				if ( tinymce.Env.ie && tinymce.Env.ie < 11 ) {
+					tinymce.$( '.wp-editor-wrap ' ).removeClass( 'tmce-active' ).addClass( 'html-active' );
+				} else {
+					if ( document.readyState === 'complete' ) {
+						initialize();
+					} else {
+						document.addEventListener( 'readystatechange', initialize );
+					}
+				}
+			}
+
+			if ( typeof quicktags !== 'undefined' ) {
+				for ( id in tinyMCEPreInit.qtInit ) {
+					quicktags( tinyMCEPreInit.qtInit[id] );
+
+					if ( ! window.wpActiveEditor ) {
+						window.wpActiveEditor = id;
+					}
+				}
+			}
+		}());
+		</script>
+				<div id="wp-link-backdrop" style="display: none"></div>
+		<div id="wp-link-wrap" class="wp-core-ui" style="display: none" role="dialog" aria-labelledby="link-modal-title">
+		<form id="wp-link" tabindex="-1">
+		<input type="hidden" id="_ajax_linking_nonce" name="_ajax_linking_nonce" value="e1ff26eb41" />		<h1 id="link-modal-title">Insert/edit link</h1>
+		<button type="button" id="wp-link-close"><span class="screen-reader-text">Close</span></button>
+		<div id="link-selector">
+			<div id="link-options">
+				<p class="howto" id="wplink-enter-url">Enter the destination URL</p>
+				<div>
+					<label><span>URL</span>
+					<input id="wp-link-url" type="text" aria-describedby="wplink-enter-url" /></label>
+				</div>
+				<div class="wp-link-text-field">
+					<label><span>Link Text</span>
+					<input id="wp-link-text" type="text" /></label>
+				</div>
+				<div class="link-target">
+					<label><span></span>
+					<input type="checkbox" id="wp-link-target" /> Open link in a new tab</label>
+				</div>
+			</div>
+			<p class="howto" id="wplink-link-existing-content">Or link to existing content</p>
+			<div id="search-panel">
+				<div class="link-search-wrapper">
+					<label>
+						<span class="search-label">Search</span>
+						<input type="search" id="wp-link-search" class="link-search-field" autocomplete="off" aria-describedby="wplink-link-existing-content" />
+						<span class="spinner"></span>
+					</label>
+				</div>
+				<div id="search-results" class="query-results" tabindex="0">
+					<ul></ul>
+					<div class="river-waiting">
+						<span class="spinner"></span>
+					</div>
+				</div>
+				<div id="most-recent-results" class="query-results" tabindex="0">
+					<div class="query-notice" id="query-notice-message">
+						<em class="query-notice-default">No search term specified. Showing recent items.</em>
+						<em class="query-notice-hint screen-reader-text">Search or use up and down arrow keys to select an item.</em>
+					</div>
+					<ul></ul>
+					<div class="river-waiting">
+						<span class="spinner"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="submitbox">
+			<div id="wp-link-cancel">
+				<button type="button" class="button">Cancel</button>
+			</div>
+			<div id="wp-link-update">
+				<input type="submit" value="Add Link" class="button button-primary" id="wp-link-submit" name="wp-link-submit">
+			</div>
+		</div>
+		</form>
+		</div>
+		
+<div class="clear"></div></div><!-- wpwrap -->
+<script type="text/javascript">if(typeof wpOnload==='function')wpOnload();</script>
+</body>
+</html>
